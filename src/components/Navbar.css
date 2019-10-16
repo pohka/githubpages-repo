@@ -1,0 +1,47 @@
+
+.navbar
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: 100%;
+  background: var(--color_nav);
+  overflow-y: scroll;
+  text-align: left;
+}
+
+.api-nav-item
+{
+  padding: 4px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.api-nav-item:hover
+{
+  background: var(--hover);
+}
+
+.api-nav-heading
+{
+  cursor: default;
+  
+  
+  font-size: 16px;
+  line-height: 30px;
+  border-top: 2px solid var(--color_table_border);
+  border-bottom: 2px solid var(--color_table_heading);
+  margin-bottom:8px;
+}
+
+.api-nav-heading-constants
+{
+  margin-top: 20px;
+  padding-top: 40px;
+}
+
+.api-nav-heading:hover
+{
+  background:none;
+}

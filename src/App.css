@@ -1,5 +1,27 @@
+:root 
+{
+  --color_1 : rgb(82,82,82);
+  --color_background : rgb(42, 42, 42);
+  --color_text: rgb(211, 211, 211);
+  --color_table_border: rgb(75, 75, 75);
+  --color_nav: rgb(56, 56, 56);
+  --color_table_heading: rgb(207, 13, 13);
+  --hover: #555;
+  --color_code: rgb(66, 66, 66);
+}
+
+body
+{
+  background: var(--color_background);
+  color: var(--color_text);
+}
+
 .App {
   text-align: center;
+  font-family: 'Noto Sans', sans-serif;
+  letter-spacing: 0.7px;
+  font-size: 14px;
+  margin-bottom: 500px;
 }
 
 .App-logo {
@@ -19,4 +41,19 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.tables
+{
+  margin-left: 350px;
+}
+
+code
+{
+  font-family: 'Source Code Pro', monospace;
+  font-size:12px;
+  letter-spacing: 0.0px;
+  background: var(--color_code);
+  display:block;
+  padding: 4px 6px;
 }

@@ -1,0 +1,100 @@
+th, td
+{
+  text-align: left;
+  padding: 4px 4px;
+}
+
+tbody td
+{
+  border-bottom: 1px solid var(--color_table_border);
+}
+
+tr:hover
+{
+  background: var(--hover);
+}
+
+thead th
+{
+  background: var(--color_table_heading);
+  color: white;
+}
+
+table
+{
+  border-collapse: collapse;
+}
+
+table a
+{
+  color: var(--text);
+  text-decoration: none;
+  display:block;
+
+}
+
+table a:hover
+{
+  text-decoration: underline;
+}
+
+.category
+{
+  padding: 20px;
+}
+
+
+.category-title
+{
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+
+.category h2
+{
+  margin-top: 8px;
+  padding-top:30px;
+  margin-bottom: 4px;
+}
+
+.category-desc
+{
+  margin-top: 10px;
+}
+
+.category-extends
+{
+  
+}
+
+.col-function
+{
+  width: 300px;
+  height: 100%;
+  padding: 0px 4px;
+  white-space: nowrap;
+  line-height: 36px;
+}
+
+
+.col-signature
+{
+  width: 500px;
+}
+
+.col-class-desc
+{
+  padding-left: 10px;
+
+}
+
+.constants-title
+{
+  margin-top: 100px;
+}
+
+.constants
+{
+  padding: 20px;
+}
