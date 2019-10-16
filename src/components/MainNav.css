@@ -1,0 +1,35 @@
+.main-nav-con
+{
+  width: 100%;
+  border-bottom: 2px solid #444;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: var(--color_background);
+}
+
+.main-nav
+{
+  display: flex;
+  flex: flex-grow;
+  width: 800px;
+  margin: auto;
+}
+
+.main-nav-item
+{
+  min-width: 200px;
+  font-size: 18px;
+  line-height:  42px;
+  text-decoration: none;
+  color: var(--color_text);
+  user-select: none;
+}
+
+.main-nav-item:hover
+{
+  background: rgb(231, 1, 1);
+  color: white;
+  transition: 0.1s;
+}

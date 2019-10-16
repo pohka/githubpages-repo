@@ -49,7 +49,9 @@ class Navbar extends Component {
   render()
   {
     return(
-      <div className="navbar">{this.getRows()}</div>
+      <div className="navbar">
+        <div className="navbar-rows-con">{this.getRows()}</div>
+      </div>
     );
   }
 }
