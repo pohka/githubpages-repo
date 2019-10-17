@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
+import App from './App';
 
 
 class Router extends Component
 {
+  static init()
+  {
+    window.addEventListener("popstate", function(e) {
+      let route = Router.findRouteMatch(e.target.location.pathname);
+      Router.setRoute(route);
+    });
+  }
   
   static addRoute(routeData)
   {
@@ -46,6 +54,26 @@ class Router extends Component
 
     return route.dom();
   }
+
+  static setRoute(route)
+  {
+    window.history.pushState({}, route.meta.title, route.path);
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+  }
+
+  static handleClick(e)
+  {
+    var routeName = e.target.getAttribute("route");
+    if(routeName != null)
+    {
+      var route = Router.getRouteByName(routeName);
+      if(route != null)
+      {
+        Router.setRoute(route);
+      }
+    }
+  }
+
 }
 
 Router._routes = [];

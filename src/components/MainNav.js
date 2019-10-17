@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import './MainNav.css';
+import Router from "../Router"
 
 class MainNavbar extends Component {
 
@@ -10,8 +11,8 @@ class MainNavbar extends Component {
       <div>
         <div className="main-nav-con">
           <div className="main-nav">
-            <a href="/api" className="main-nav-item">API</a>
-            <a href="/kv-checker" className="main-nav-item">KV Checker</a>
+            <b href="/api" route="api" className="main-nav-item" onClick={Router.handleClick}>API</b>
+            <b href="/kv-checker" route="kv-checker" className="main-nav-item"  onClick={Router.handleClick}>KV Checker</b>
           </div>
         </div>
       </div>

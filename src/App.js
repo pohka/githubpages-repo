@@ -9,8 +9,10 @@ import MainNav from "./components/MainNav.js"
 import KVPage from "./components/KVPage"
 
 
+
 function addRoutes()
 {
+  Router.init();
   Router.addRoute({
     name: "api",
     path: "/api",
@@ -22,6 +24,9 @@ function addRoutes()
           <APINavbar></APINavbar>
         </div>
       );
+    },
+    meta : {
+      title : "API - DCG Tools"
     }
   });
 
@@ -35,6 +40,9 @@ function addRoutes()
           <KVPage></KVPage>
         </div>
       );
+    },
+    meta : {
+      title : "KV Checker - DCG Tools"
     }
   });
 }
