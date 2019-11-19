@@ -7,6 +7,7 @@
   left: 0;
   z-index: 10;
   background: var(--color_background);
+  text-align: center;
 }
 
 .main-nav
@@ -24,11 +25,12 @@
   text-decoration: none;
   color: var(--color_text);
   user-select: none;
+  cursor: pointer;
 }
 
 .main-nav-item:hover
 {
   background: rgb(231, 1, 1);
   color: white;
-  transition: 0.1s;
+  transition: 0.08s;
 }

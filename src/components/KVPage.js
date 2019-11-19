@@ -67,7 +67,7 @@ class KVPage extends Component {
       {
         this.autoH = 500;
       }
-      console.log("linecount:", lineCount, el.textContent);
+      //console.log("linecount:", lineCount, el.textContent);
       for(var i=1; i<=lineCount || i<1; i++)
       {
         let key = "line-" + i;
@@ -99,6 +99,7 @@ class KVPage extends Component {
               </div>
               <textarea 
               id="kv-input"
+              class="no-select"
                placeholder="Paste or edit your KV file here.." 
                onChange={ (e)=>{this.handleChange(this,e) }}
                style={style}

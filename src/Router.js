@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import App from './App';
+import ReactDOM from 'react-dom';
 
 
 class Router extends Component
@@ -58,7 +59,9 @@ class Router extends Component
   static setRoute(route)
   {
     window.history.pushState({}, route.meta.title, route.path);
+    ReactDOM.render(route.dom(), document.getElementById("root"))
     document.body.scrollTop = document.documentElement.scrollTop = 0;
+    
   }
 
   static handleClick(e)

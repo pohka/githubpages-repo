@@ -3,6 +3,7 @@
   display:flex;
   width: 90%;
   margin: auto;
+  margin-top: 44px;
 }
 
 .kv-section
@@ -56,12 +57,12 @@
 {
   text-shadow: none;
   width:98%;
-  min-height: 574px;
+  min-height: 580px;
   height: auto;
   white-space: nowrap;
   background: var(--color_nav);
   color: var(--color_text);
-  margin: 4px auto;
+  margin: 0px auto;
   resize: none;
   overflow-x: scroll;
   overflow-y: hidden;

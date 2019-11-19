@@ -16,27 +16,29 @@ class Navbar extends Component {
   {
     var arr = [];
 
-    arr.push(<div className="api-nav-item api-nav-heading">Classes</div>);
+    arr.push(<div className="api-nav-item api-nav-heading" key="h2-classes">Classes</div>);
 
     if(data.classes !== undefined)
     {
       for(var i=0; i<data.classes.length; i++)
       {
+        var key = "classes-" + i
         arr.push(
-          <div className="api-nav-item" anchor-id={data.classes[i].title} onClick={this.handleRowClick}>
+          <div className="api-nav-item" key={key} anchor-id={data.classes[i].title} onClick={this.handleRowClick}>
             {data.classes[i].title}
           </div>
         );
       }
     }
 
-    arr.push(<div className="api-nav-item api-nav-heading api-nav-heading-constants">Constants</div>);
+    arr.push(<div className="api-nav-item api-nav-heading api-nav-heading-constants" key="h2-constants">Constants</div>);
 
     if(data.constants !== undefined)
     {
       for (var i = 0; i < data.constants.length; i++) {
+        var key = "consts-" + i
         arr.push(
-          <div className="api-nav-item" anchor-id={data.constants[i].title} onClick={this.handleRowClick}>
+          <div className="api-nav-item" key={key} anchor-id={data.constants[i].title} onClick={this.handleRowClick}>
             {data.constants[i].title}
           </div>
         );

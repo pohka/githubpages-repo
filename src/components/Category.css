@@ -18,7 +18,9 @@ thead th
 {
   background: var(--color_table_heading);
   color: white;
+  padding: 4px 12px;
 }
+
 
 table
 {
@@ -70,9 +72,10 @@ table a:hover
 
 .col-function
 {
-  width: 300px;
+  width: 330px;
   height: 100%;
   padding: 0px 4px;
+  padding-left:10px;
   white-space: nowrap;
   line-height: 36px;
 }
@@ -97,4 +100,26 @@ table a:hover
 .constants
 {
   padding: 20px;
+}
+
+
+.func-api-link
+{
+  position: absolute;
+  margin-left: 306px;
+  margin-top: -36px;
+  height: 24px;
+  width: 24px;
+  line-height: 24px;
+  user-select: none;
+  line-height: 20px;
+  padding: 4px 4px;
+  padding-top:8px;
+  text-align: center;
+}
+
+.func-api-link:hover
+{
+  color: white;
+  background: var(--color_table_heading);
 }

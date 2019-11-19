@@ -15,7 +15,7 @@ function addRoutes()
   Router.init();
   Router.addRoute({
     name: "api",
-    path: "/api",
+    path: "/dota/api",
     dom : function () {
       return (
         <div>
@@ -32,7 +32,7 @@ function addRoutes()
 
   Router.addRoute({
     name: "kv-checker",
-    path: "/kv-checker",
+    path: "/dota/kv-checker",
     dom: function () {
       return (
         <div>

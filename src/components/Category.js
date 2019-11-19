@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Category.css';
+import { Icon } from 'react-icons-kit'
+import {externalLink} from 'react-icons-kit/fa/externalLink'
 
 class Category extends Component
 {
@@ -20,7 +22,10 @@ class Category extends Component
 
       rows.push(
         <tr key={key} id={id}>
-          <td className="col-function"><a href={href} target="_blank">{func}</a></td>
+          <td className="col-function">
+            {func}
+            <a href={href} className="func-api-link" target="_blank"><Icon size={20} icon={externalLink} /></a>
+          </td>
           <td className="col-signature"><code>{funcs[func].signature}</code></td>
           <td className="col-class-desc">{funcs[func].description}</td>
         </tr>
