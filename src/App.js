@@ -7,7 +7,7 @@ import API from "./components/API";
 import Router from "./Router"
 import MainNav from "./components/MainNav.js"
 import KVPage from "./components/KVPage"
-
+import ScrollTo from "./components/Scroll.js"
 
 
 function addRoutes()
@@ -46,6 +46,15 @@ function addRoutes()
     }
   });
 }
+
+document.fonts.onloadingdone = function (fontFaceSetEvent) {
+  if(window.location.hash.length > 1)
+  {
+    console.log("scrolling on font load")
+    let id = window.location.hash.substr(1);
+    ScrollTo(id);
+  }
+};
 
 function App() {
   addRoutes();

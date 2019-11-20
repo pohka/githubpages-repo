@@ -7,7 +7,7 @@ function ScrollTo(id)
       var elRect = el.getBoundingClientRect();
       var bodyRect = document.body.getBoundingClientRect();
       var offset = elRect.top - bodyRect.top;
-      document.location.hash = id;
+      console.log("scrolling to:", offset, id)
       document.documentElement.scrollTop = offset;
     }
   }

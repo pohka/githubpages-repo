@@ -24,7 +24,7 @@ class Category extends Component
         <tr key={key} id={id}>
           <td className="col-function">
             {func}
-            <a href={href} className="func-api-link" target="_blank"><Icon size={20} icon={externalLink} /></a>
+            <a href={href} className="func-api-link" target="_blank"  rel="noopener noreferrer"><Icon size={20} icon={externalLink} /></a>
           </td>
           <td className="col-signature"><code>{funcs[func].signature}</code></td>
           <td className="col-class-desc">{funcs[func].description}</td>
@@ -40,7 +40,7 @@ class Category extends Component
   {
     var str = "";
 
-    if (this.props.data.extends !== undefined && this.props.data.extends != "")
+    if (this.props.data.extends !== undefined && this.props.data.extends !== "")
     {
       str = "extends " + this.props.data.extends;
     }
@@ -51,13 +51,13 @@ class Category extends Component
   getDescription()
   {
     var result = [];
-    if(this.props.data.description != "")
+    if(this.props.data.description !== "")
     {
       result.push(
         <div key="desc">{this.props.data.description}</div>
       );
     }
-    if (this.props.data.accessor != "")
+    if (this.props.data.accessor !== "")
     {
       result.push(
         <div key="accessor">Global Accessor: {this.props.data.accessor}</div>

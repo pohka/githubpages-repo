@@ -18,11 +18,11 @@ class API extends Component {
 
     arr.push(<h2 className="constants-title" key="constants-title">Constants</h2>);
 
-    for (var i = 0; i < data.constants.length; i++)
+    for (var i2 = 0; i2 < data.constants.length; i2++)
     {
-      var key = data.constants[i].title;
-      var isModifierFunc = (key == "modifierfunction")
-      arr.push(<Constants data={data.constants[i]} key={key} isModifierFunc={isModifierFunc}></Constants>);
+      var key2 = data.constants[i2].title;
+      var isModifierFunc = (key2 === "modifierfunction")
+      arr.push(<Constants data={data.constants[i2]} key={key2} isModifierFunc={isModifierFunc}></Constants>);
     }
 
     return arr;
@@ -34,8 +34,15 @@ class API extends Component {
     var hash = window.location.hash;
     if(hash.length > 0)
     {
+      console.log("api scroll")
       var id = hash.substr(1);
       ScrollTo(id);
+      var path = window.location.pathname + "#" + id;
+      var title = "api - " + id;
+      window.history.pushState({}, title, "#"+id);
+     // var el = document.getElementById(id);
+     // el.scrollIntoView(true);
+     
     }
   }
 

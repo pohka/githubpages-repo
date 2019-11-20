@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import App from './App';
+//import App from './App';
 import ReactDOM from 'react-dom';
 
 
@@ -22,7 +22,7 @@ class Router extends Component
   {
     for(var i=0; i<Router._routes.length; i++)
     {
-      if(Router._routes[i].name == name)
+      if(Router._routes[i].name === name)
       {
         return Router._routes[i];
       }
@@ -35,7 +35,7 @@ class Router extends Component
   {
     for (var i = 0; i < Router._routes.length; i++)
     {
-      if (Router._routes[i].path == path)
+      if (Router._routes[i].path === path)
       {
         return Router._routes[i];
       }
@@ -48,7 +48,7 @@ class Router extends Component
   {
     var path = window.location.pathname;
     var route = Router.findRouteMatch(path)
-    if (route == null) 
+    if (route === null) 
     {
       return (<div>Page not Found</div>);
     }
@@ -61,16 +61,15 @@ class Router extends Component
     window.history.pushState({}, route.meta.title, route.path);
     ReactDOM.render(route.dom(), document.getElementById("root"))
     document.body.scrollTop = document.documentElement.scrollTop = 0;
-    
   }
 
   static handleClick(e)
   {
     var routeName = e.target.getAttribute("route");
-    if(routeName != null)
+    if(routeName !== null)
     {
       var route = Router.getRouteByName(routeName);
-      if(route != null)
+      if(route !== null)
       {
         Router.setRoute(route);
       }

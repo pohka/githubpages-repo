@@ -10,7 +10,7 @@ class Constants extends Component
 
     var values = this.props.data.values;
 
-    if(this.props.isModifierFunc == false)
+    if(this.props.isModifierFunc === false)
     {
       for(var i=0; i<values.length; i++)
       {
@@ -26,15 +26,15 @@ class Constants extends Component
     }
     else
     {
-      for(var i=0; i<values.length; i++)
+      for(var i2=0; i2<values.length; i2++)
       {
-        var key = this.props.data.title + "_" + i;
+        var key2 = this.props.data.title + "_" + i2;
         arr.push(
-          <tr key={key}>
-            <td>{values[i].name}</td>
-            <td>{values[i].value}</td>
-            <td>{values[i].luafunction}</td>
-            <td>{values[i].description}</td>
+          <tr key={key2}>
+            <td>{values[i2].name}</td>
+            <td>{values[i2].value}</td>
+            <td>{values[i2].luafunction}</td>
+            <td>{values[i2].description}</td>
           </tr>
         )
       }
@@ -47,7 +47,7 @@ class Constants extends Component
 
   getHeadings()
   {
-    if(this.props.isModifierFunc == false)
+    if(this.props.isModifierFunc === false)
     {
       return (
         <tr>

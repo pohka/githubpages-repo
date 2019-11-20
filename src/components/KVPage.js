@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 import './KV.css';
 import KVChecker from "../KVChecker"
-import { tsImportEqualsDeclaration } from '@babel/types';
 
 class KVPage extends Component {
   constructor(props)
@@ -32,7 +31,7 @@ class KVPage extends Component {
     }
     else
     {
-      if(this.errs.length == 0)
+      if(this.errs.length === 0)
       {
         return (
           <div className="output">
@@ -58,7 +57,7 @@ class KVPage extends Component {
   getLinesNums()
   {
     var el = document.getElementById("kv-input");
-    if(el != null)
+    if(el !== null)
     {
       var arr = [];
       var lineCount = el.value.split("\n").length;
