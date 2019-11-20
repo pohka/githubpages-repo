@@ -7,7 +7,6 @@
   width: 350px;
   height: 100%;
   background: var(--color_nav);
-  overflow-y: scroll;
   text-align: left;
 }
 
@@ -27,18 +26,16 @@
 .api-nav-heading
 {
   cursor: default;
-  
-  
   font-size: 16px;
   line-height: 30px;
-  border-top: 2px solid var(--color_table_border);
+
   border-bottom: 2px solid var(--color_table_heading);
   margin-bottom:8px;
 }
 
 .api-nav-heading-constants
 {
-  margin-top: 20px;
+  margin-top: 0px;
   padding-top: 40px;
 }
 
@@ -49,7 +46,9 @@
 
 .navbar-rows-con
 {
-  padding-bottom: 150px;
+  height: 60%;
+  padding-bottom: 200px;
+  overflow-y: scroll;
 }
 
 .sidenav-menu
@@ -91,6 +90,7 @@
 .sidenav-search
 {
   height: 36px;
+  border-bottom: 2px solid var(--color_table_border);
 }
 
 .sidenav-search input
@@ -104,6 +104,7 @@
   color: var(--color_text);
   background: var(--color_code);
   font-size: 16px;
+  
 }
 
 .search-icon
