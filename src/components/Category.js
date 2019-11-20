@@ -69,10 +69,6 @@ class Category extends Component
 
   render()
   {
-   // console.log(this.props.data)
-
-
-
     return (
       <div className="category" id={this.props.data.title}>
           <div className="category-title">

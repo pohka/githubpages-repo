@@ -98,7 +98,7 @@ class KVPage extends Component {
               </div>
               <textarea 
               id="kv-input"
-              class="no-select"
+              className="no-select"
                placeholder="Paste or edit your KV file here.." 
                onChange={ (e)=>{this.handleChange(this,e) }}
                style={style}

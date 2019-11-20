@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import "./components/Category"
 import APINavbar from './components/Navbar';
@@ -22,7 +21,7 @@ function addRoutes()
         <div>
           <MainNav></MainNav>
           <API></API>
-          <APINavbar></APINavbar>
+          <APINavbar menu="all"></APINavbar>
         </div>
       );
     },
