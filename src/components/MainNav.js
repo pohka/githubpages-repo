@@ -11,8 +11,8 @@ class MainNavbar extends Component {
       <div>
         <div className="main-nav-con">
           <div className="main-nav">
-            <b href="/dota/api" route="api" className="main-nav-item" onClick={Router.handleClick}>API</b>
-            <b href="/dota/kv-checker" route="kv-checker" className="main-nav-item"  onClick={Router.handleClick}>KV Checker</b>
+            <b href="/dota/api" route="dota-api" className="main-nav-item" onClick={Router.handleClick}>API</b>
+            <b href="/dota/kv-checker" route="dota-kv-checker" className="main-nav-item"  onClick={Router.handleClick}>KV Checker</b>
           </div>
         </div>
       </div>

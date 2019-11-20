@@ -8,13 +8,14 @@ import Router from "./Router"
 import MainNav from "./components/MainNav.js"
 import KVPage from "./components/KVPage"
 import ScrollTo from "./components/Scroll.js"
+import Home from "./components/Home.js"
 
 
 function addRoutes()
 {
   Router.init();
   Router.addRoute({
-    name: "api",
+    name: "dota-api",
     path: "/dota/api",
     dom : function () {
       return (
@@ -31,7 +32,7 @@ function addRoutes()
   });
 
   Router.addRoute({
-    name: "kv-checker",
+    name: "dota-kv-checker",
     path: "/dota/kv-checker",
     dom: function () {
       return (
@@ -43,6 +44,19 @@ function addRoutes()
     },
     meta : {
       title : "KV Checker - DCG Tools"
+    }
+  });
+
+  Router.addRoute({
+    name: "home",
+    path: "/",
+    dom: function () {
+      return (
+        <Home></Home>
+      );
+    },
+    meta : {
+      title : "Home - DCG Tools"
     }
   });
 }
