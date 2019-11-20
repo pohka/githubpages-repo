@@ -102,7 +102,12 @@ table a:hover
 
 .constants
 {
-  padding: 20px;
+  padding-bottom: 40px;
+}
+
+.constants-name
+{
+  padding-left: 10px;
 }
 
 
@@ -125,4 +130,14 @@ table a:hover
 {
   color: white;
   background: var(--color_table_heading);
+}
+
+.constants-item-title
+{
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: -8px;
+  text-align: left;
 }

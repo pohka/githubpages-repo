@@ -17,7 +17,7 @@ class Constants extends Component
         var key = this.props.data.title + "_" + i;
         arr.push(
           <tr key={key}>
-            <td>{values[i].name}</td>
+            <td className="constants-name">{values[i].name}</td>
             <td>{values[i].value}</td>
             <td>{values[i].description}</td>
           </tr>
@@ -31,7 +31,7 @@ class Constants extends Component
         var key2 = this.props.data.title + "_" + i2;
         arr.push(
           <tr key={key2}>
-            <td>{values[i2].name}</td>
+            <td className="constants-name">{values[i2].name}</td>
             <td>{values[i2].value}</td>
             <td>{values[i2].luafunction}</td>
             <td>{values[i2].description}</td>
@@ -74,7 +74,7 @@ class Constants extends Component
   {
     return(
       <div className="constants" id={this.props.data.title}>
-        <div className="category-title">
+        <div className="constants-item-title">
           <h2>{this.props.data.title}</h2>
         </div>
         <table>

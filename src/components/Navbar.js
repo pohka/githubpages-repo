@@ -29,14 +29,56 @@ class Navbar extends Component {
 
     if(data.classes !== undefined)
     {
-      for(var i=0; i<data.classes.length; i++)
+      if(this.currentOption == "all")
       {
-        var key = "classes-" + i
-        arr.push(
-          <div className="api-nav-item" key={key} anchor-id={data.classes[i].title} onClick={this.handleRowClick}>
-            {data.classes[i].title}
-          </div>
-        );
+        for(var i=0; i<data.classes.length; i++)
+        {
+          var key = "classes-" + i;
+          arr.push(
+            <div className="api-nav-item" key={key} anchor-id={data.classes[i].title} onClick={this.handleRowClick}>
+              {data.classes[i].title}
+            </div>
+          );
+        }
+      }
+      else
+      {
+        //sorted list of options
+        var filterOptions = [
+          "CDOTABaseAbility",
+          "CDOTABaseGameMode",
+          "CDOTAGamerules",
+          "CDOTAPlayer",
+          "CDOTA_Ability_Lua",
+          "CDOTA_BaseNPC",
+          "CDOTA_BaseNPC_Hero",
+          "CDOTA_Buff",
+          "CDOTA_Item",
+          "CDOTA_Item_DataDriven",
+          "CDOTA_Item_Lua",
+          "CDOTA_MapTree",
+          "CDOTA_Modifier_Lua",
+          "CDOTA_PlayerResource",
+          "CEntities",
+          "CEntityInstance",
+          "Global",
+          "ProjectileManager",
+          "Vector"
+        ];
+        var filterIndex = 0;
+        for(var i=0; i<data.classes.length; i++)
+        {
+          if(data.classes[i].title === filterOptions[filterIndex])
+          {
+            filterIndex+=1;
+            var key = "classes-" + i;
+            arr.push(
+              <div className="api-nav-item" key={key} anchor-id={data.classes[i].title} onClick={this.handleRowClick}>
+                {data.classes[i].title}
+              </div>
+            );
+          }
+        }
       }
     }
 
@@ -44,13 +86,51 @@ class Navbar extends Component {
 
     if(data.constants !== undefined)
     {
-      for (var i2 = 0; i2 < data.constants.length; i2++) {
-        var key2 = "consts-" + i2
-        arr.push(
-          <div className="api-nav-item" key={key2} anchor-id={data.constants[i2].title} onClick={this.handleRowClick}>
-            {data.constants[i2].title}
-          </div>
-        );
+      if(this.currentOption == "all")
+      {
+        for (var i2 = 0; i2 < data.constants.length; i2++) {
+          var key2 = "consts-" + i2;
+          arr.push(
+            <div className="api-nav-item" key={key2} anchor-id={data.constants[i2].title} onClick={this.handleRowClick}>
+              {data.constants[i2].title}
+            </div>
+          );
+        }
+      }
+      else
+      {
+        //sorted list of options
+        var filterOptions2 = [
+          "DOTATeam_t",
+          "DOTAUnitAttackCapability_t",
+          "DOTAUnitMoveCapability_t",
+          "DOTA_ABILITY_BEHAVIOR",
+          "DOTA_GameState",
+          "DOTA_RUNES",
+          "DOTA_UNIT_TARGET_FLAGS",
+          "DOTA_UNIT_TARGET_TEAM",
+          "DOTA_UNIT_TARGET_TYPE",
+          "Find Types",
+          "GameActivity_t",
+          "ParticleAttachment_t",
+          "modifierfunction",
+          "modifierstate"
+        ];
+        var filterIndex2 = 0;
+
+        for (var i2 = 0; i2 < data.constants.length; i2++)
+        {
+          if(data.constants[i2].title === filterOptions2[filterIndex2])
+          {
+            filterIndex2+=1;
+            var key2 = "consts-" + i2;
+            arr.push(
+              <div className="api-nav-item" key={key2} anchor-id={data.constants[i2].title} onClick={this.handleRowClick}>
+                {data.constants[i2].title}
+              </div>
+            );
+          }
+        }
       }
     }
 
