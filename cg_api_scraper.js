@@ -165,12 +165,35 @@ while (i < content.length)
   i++;
 }
 
+console.log("generating json string")
+
+function sortArr(arr, key)
+{
+  const n = arr.length
+  for (var i = 0; i < n-1; i++)      
+  {
+    for (var j = 0; j < n-i-1; j++) 
+    {
+      if (arr[j][key] > arr[j+1][key])
+      {
+        let temp = arr[j];
+        arr[j] = arr[j+1];
+        arr[j+1] = temp;
+      }
+    }
+  }
+  return arr;
+}
+//order objects
+const orderedClasses = sortArr(classes, "title");
+const orderedConstants = sortArr(constants, "title");
+
 var obj = {
-  classes: classes,
-  constants: constants
+  classes: orderedClasses,
+  constants: orderedConstants
 };
 
-console.log("generating json string")
+
 var stringObj = JSON.stringify(obj, undefined, 2)
 console.log(stringObj);
 
@@ -187,4 +210,4 @@ function download() {
 
   document.body.removeChild(element);
 }
-download();
+//download();
