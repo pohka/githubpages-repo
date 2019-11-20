@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import data from './../extractedData.json';
+import data from './../output.json';
 import Category from './Category';
 import Constants from './Constants';
 import ScrollTo from "./Scroll";
@@ -10,16 +10,19 @@ class API extends Component {
   {
     var arr = [];
 
-    for (var i = 0; i < data.classes.length; i++) {
+    for (var i = 0; i < data.classes.length; i++)
+    {
       var key = data.classes[i].title;
       arr.push(<Category data={data.classes[i]} key={key}></Category>)
     }
 
     arr.push(<h2 className="constants-title" key="constants-title">Constants</h2>);
 
-    for (var i = 0; i < data.constants.length; i++) {
+    for (var i = 0; i < data.constants.length; i++)
+    {
       var key = data.constants[i].title;
-      arr.push(<Constants data={data.constants[i]} key={key}></Constants>);
+      var isModifierFunc = (key == "modifierfunction")
+      arr.push(<Constants data={data.constants[i]} key={key} isModifierFunc={isModifierFunc}></Constants>);
     }
 
     return arr;

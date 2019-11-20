@@ -42,13 +42,16 @@ table a:hover
 
 .category
 {
-  padding: 20px;
+  padding-bottom: 40px;
 }
 
 
 .category-title
 {
+  margin-top: 30px;
   padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   text-align: left;
 }
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Navbar.css';
-import data from './../extractedData.json';
+import data from './../output.json';
 import ScrollTo from "./Scroll";
 
 class Navbar extends Component {

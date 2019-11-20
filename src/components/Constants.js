@@ -9,19 +9,65 @@ class Constants extends Component
     var arr = [];
 
     var values = this.props.data.values;
-    for(var i=0; i<values.length; i++)
+
+    if(this.props.isModifierFunc == false)
     {
-      var key = this.props.data.title + "_" + i;
-      arr.push(
-        <tr key={key}>
-          <td>{values[i].name}</td>
-          <td>{values[i].value}</td>
-          <td>{values[i].description}</td>
-        </tr>
-      )
+      for(var i=0; i<values.length; i++)
+      {
+        var key = this.props.data.title + "_" + i;
+        arr.push(
+          <tr key={key}>
+            <td>{values[i].name}</td>
+            <td>{values[i].value}</td>
+            <td>{values[i].description}</td>
+          </tr>
+        )
+      }
+    }
+    else
+    {
+      for(var i=0; i<values.length; i++)
+      {
+        var key = this.props.data.title + "_" + i;
+        arr.push(
+          <tr key={key}>
+            <td>{values[i].name}</td>
+            <td>{values[i].value}</td>
+            <td>{values[i].luafunction}</td>
+            <td>{values[i].description}</td>
+          </tr>
+        )
+      }
     }
 
+    
+
     return arr;
+  }
+
+  getHeadings()
+  {
+    if(this.props.isModifierFunc == false)
+    {
+      return (
+        <tr>
+          <th>Name</th>
+          <th>Value</th>
+          <th>Description</th>
+        </tr>
+      );
+    }
+    else
+    {
+      return (
+        <tr>
+          <th>Name</th>
+          <th>Value</th>
+          <th>Lua Function</th>
+          <th>Description</th>
+        </tr>
+      );
+    }
   }
 
   render()
@@ -33,11 +79,7 @@ class Constants extends Component
         </div>
         <table>
           <thead>
-            <tr>
-              <th>Name</th>
-              <th>Value</th>
-              <th>Description</th>
-            </tr>
+            {this.getHeadings()}
           </thead>
           <tbody>
             {this.tableRows()}

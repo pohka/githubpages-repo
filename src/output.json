@@ -10287,886 +10287,1063 @@
         {
           "name": "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE",
           "value": "0",
-          "description": "GetModifierPreAttack_BonusDamage"
+          "luafunction": "GetModifierPreAttack_BonusDamage",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE_PROC",
           "value": "1",
-          "description": "GetModifierPreAttack_BonusDamage_Proc"
+          "luafunction": "GetModifierPreAttack_BonusDamage_Proc",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE_POST_CRIT",
           "value": "2",
-          "description": "GetModifierPreAttack_BonusDamagePostCrit"
+          "luafunction": "GetModifierPreAttack_BonusDamagePostCrit",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE",
           "value": "3",
-          "description": "GetModifierBaseAttack_BonusDamage"
+          "luafunction": "GetModifierBaseAttack_BonusDamage",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_PROCATTACK_BONUS_DAMAGE_PHYSICAL",
           "value": "4",
-          "description": "GetModifierProcAttack_BonusDamage_Physical"
+          "luafunction": "GetModifierProcAttack_BonusDamage_Physical",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_PROCATTACK_BONUS_DAMAGE_MAGICAL",
           "value": "5",
-          "description": "GetModifierProcAttack_BonusDamage_Magical"
+          "luafunction": "GetModifierProcAttack_BonusDamage_Magical",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_PROCATTACK_BONUS_DAMAGE_PURE",
           "value": "6",
-          "description": "GetModifierProcAttack_BonusDamage_Pure"
+          "luafunction": "GetModifierProcAttack_BonusDamage_Pure",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_PROCATTACK_FEEDBACK",
           "value": "7",
-          "description": "GetModifierProcAttack_Feedback"
+          "luafunction": "GetModifierProcAttack_Feedback",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_PRE_ATTACK",
           "value": "8",
-          "description": "GetModifierPreAttack"
+          "luafunction": "GetModifierPreAttack",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_INVISIBILITY_LEVEL",
           "value": "9",
-          "description": "GetModifierInvisibilityLevel"
+          "luafunction": "GetModifierInvisibilityLevel",
+          "description": "Generates a level of opacity on the parent."
         },
         {
           "name": "MODIFIER_PROPERTY_PERSISTENT_INVISIBILITY",
           "value": "10",
-          "description": "GetModifierPersistentInvisibility"
+          "luafunction": "GetModifierPersistentInvisibility",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT",
           "value": "11",
-          "description": "GetModifierMoveSpeedBonus_Constant"
+          "luafunction": "GetModifierMoveSpeedBonus_Constant",
+          "description": "Increases the move speed of the parent by a constant returned to it. Can get negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_MOVESPEED_BASE_OVERRIDE",
           "value": "12",
-          "description": "GetModifierMoveSpeedOverride"
+          "luafunction": "GetModifierMoveSpeedOverride",
+          "description": "changes the base move speed of the parent by a value returned to it. Minimum of 100 move speed."
         },
         {
           "name": "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE",
           "value": "13",
-          "description": "GetModifierMoveSpeedBonus_Percentage"
+          "luafunction": "GetModifierMoveSpeedBonus_Percentage",
+          "description": "Increases the move speed of the parent by a percentage returned to it. Can get negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE_UNIQUE",
           "value": "14",
-          "description": "GetModifierMoveSpeedBonus_Percentage_Unique"
+          "luafunction": "GetModifierMoveSpeedBonus_Percentage_Unique",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE_UNIQUE_2",
           "value": "15",
-          "description": "GetModifierMoveSpeedBonus_Percentage_Unique_2"
+          "luafunction": "GetModifierMoveSpeedBonus_Percentage_Unique_2",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE",
           "value": "16",
-          "description": "GetModifierMoveSpeedBonus_Special_Boots"
+          "luafunction": "GetModifierMoveSpeedBonus_Special_Boots",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE_2",
           "value": "17",
-          "description": "GetModifierMoveSpeedBonus_Special_Boots_2"
+          "luafunction": "GetModifierMoveSpeedBonus_Special_Boots_2",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE",
           "value": "18",
-          "description": "GetModifierMoveSpeed_Absolute"
+          "luafunction": "GetModifierMoveSpeed_Absolute",
+          "description": "Sets the move speed of the parent to a value. Nothing can increase or decrease move speed."
         },
         {
           "name": "MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE_MIN",
           "value": "19",
-          "description": "GetModifierMoveSpeed_AbsoluteMin"
+          "luafunction": "GetModifierMoveSpeed_AbsoluteMin",
+          "description": "Sets the move speed of the parent to a minimum value. Nothing can decrease move speed below the chosen value."
         },
         {
           "name": "MODIFIER_PROPERTY_MOVESPEED_LIMIT",
           "value": "20",
-          "description": "GetModifierMoveSpeed_Limit"
+          "luafunction": "GetModifierMoveSpeed_Limit",
+          "description": "Sets the move speed limit of the parent."
         },
         {
           "name": "MODIFIER_PROPERTY_MOVESPEED_MAX",
           "value": "21",
-          "description": "GetModifierMoveSpeed_Max"
+          "luafunction": "GetModifierMoveSpeed_Max",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_ATTACKSPEED_BASE_OVERRIDE",
           "value": "22",
-          "description": "GetModifierAttackSpeedBaseOverride"
+          "luafunction": "GetModifierAttackSpeedBaseOverride",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_FIXED_ATTACK_RATE",
           "value": "23",
-          "description": "GetModifierAttackSpeedBaseOverride"
+          "luafunction": "GetModifierAttackSpeedBaseOverride",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT",
           "value": "24",
-          "description": "GetModifierAttackSpeedBonus_Constant"
+          "luafunction": "GetModifierAttackSpeedBonus_Constant",
+          "description": "Increases the attack speed of the parent by a constant returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_COOLDOWN_REDUCTION_CONSTANT",
           "value": "25",
-          "description": "GetModifierCooldownReduction_Constant"
+          "luafunction": "GetModifierCooldownReduction_Constant",
+          "description": "Reduces the cooldown of all skills and items of the parent by a constant returned to it. Can get negative values to increase cooldowns instead."
         },
         {
           "name": "MODIFIER_PROPERTY_BASE_ATTACK_TIME_CONSTANT",
           "value": "26",
-          "description": "GetModifierBaseAttackTimeConstant"
+          "luafunction": "GetModifierBaseAttackTimeConstant",
+          "description": "Decreases the base attack time of the parent by a constant returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_ATTACK_POINT_CONSTANT",
           "value": "27",
-          "description": "GetModifierAttackPointConstant"
+          "luafunction": "GetModifierAttackPointConstant",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE",
           "value": "28",
-          "description": "GetModifierDamageOutgoing_Percentage"
+          "luafunction": "GetModifierDamageOutgoing_Percentage",
+          "description": "Increases the raw damage that the parent deals by a percentage returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE_ILLUSION",
           "value": "29",
-          "description": "GetModifierDamageOutgoing_Percentage_Illusion"
+          "luafunction": "GetModifierDamageOutgoing_Percentage_Illusion",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_TOTALDAMAGEOUTGOING_PERCENTAGE",
           "value": "30",
-          "description": "GetModifierTotalDamageOutgoing_Percentage"
+          "luafunction": "GetModifierTotalDamageOutgoing_Percentage",
+          "description": "Increases the damage of all sources that the parent deals by a percentage returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE",
           "value": "31",
-          "description": "GetModifierSpellAmplify_Percentage"
+          "luafunction": "GetModifierSpellAmplify_Percentage",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_HP_REGEN_AMPLIFY_PERCENTAGE",
           "value": "32",
-          "description": "GetModifierHPRegenAmplify_Percentage"
+          "luafunction": "GetModifierHPRegenAmplify_Percentage",
+          "description": "Increases health regen and heal gained by parent by a percentage returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_MAGICDAMAGEOUTGOING_PERCENTAGE",
           "value": "33",
-          "description": "GetModifierMagicDamageOutgoing_Percentage"
+          "luafunction": "GetModifierMagicDamageOutgoing_Percentage",
+          "description": "Increases the magic damage that the parent deals by a percentage returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE",
           "value": "34",
-          "description": "GetModifierBaseDamageOutgoing_Percentage"
+          "luafunction": "GetModifierBaseDamageOutgoing_Percentage",
+          "description": "Increases the base damage of that the parent deals by a percentage returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE_UNIQUE",
           "value": "35",
-          "description": "GetModifierBaseDamageOutgoing_PercentageUnique"
+          "luafunction": "GetModifierBaseDamageOutgoing_PercentageUnique",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE",
           "value": "36",
-          "description": "GetModifierIncomingDamage_Percentage"
+          "luafunction": "GetModifierIncomingDamage_Percentage",
+          "description": "Increases the damage of all sources that the parent takes by a percentage returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_INCOMING_PHYSICAL_DAMAGE_PERCENTAGE",
           "value": "37",
-          "description": "GetModifierIncomingPhysicalDamage_Percentage"
+          "luafunction": "GetModifierIncomingPhysicalDamage_Percentage",
+          "description": "Increases the damage of physical sources that the parent takes by a percentage returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_INCOMING_PHYSICAL_DAMAGE_CONSTANT",
           "value": "38",
-          "description": "GetModifierIncomingPhysicalDamageConstant"
+          "luafunction": "GetModifierIncomingPhysicalDamageConstant",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_INCOMING_SPELL_DAMAGE_CONSTANT",
           "value": "39",
-          "description": "GetModifierIncomingSpellDamageConstant"
+          "luafunction": "GetModifierIncomingSpellDamageConstant",
+          "description": "Increases the damage of magical sources that the parent takes by a percentage returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_EVASION_CONSTANT",
           "value": "40",
-          "description": "GetModifierEvasion_Constant"
+          "luafunction": "GetModifierEvasion_Constant",
+          "description": "Increases the evasion of the parent by a constant returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_NEGATIVE_EVASION_CONSTANT",
           "value": "41",
-          "description": "GetModifierNegativeEvasion_Constant"
+          "luafunction": "GetModifierNegativeEvasion_Constant",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_AVOID_DAMAGE",
           "value": "42",
-          "description": "GetModifierAvoidDamage"
+          "luafunction": "GetModifierAvoidDamage",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_AVOID_SPELL",
           "value": "43",
-          "description": "GetModifierAvoidSpell"
+          "luafunction": "GetModifierAvoidSpell",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_MISS_PERCENTAGE",
           "value": "44",
-          "description": "GetModifierMiss_Percentage"
+          "luafunction": "GetModifierMiss_Percentage",
+          "description": "Increases the chance of the parent to miss by a percentage returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS",
           "value": "45",
-          "description": "GetModifierPhysicalArmorBonus"
+          "luafunction": "GetModifierPhysicalArmorBonus",
+          "description": "Increases the armor of the parent by a constant returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS_UNIQUE",
           "value": "46",
-          "description": "GetModifierPhysicalArmorBonusUnique"
+          "luafunction": "GetModifierPhysicalArmorBonusUnique",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS_UNIQUE_ACTIVE",
           "value": "47",
-          "description": "GetModifierPhysicalArmorBonusUniqueActive"
+          "luafunction": "GetModifierPhysicalArmorBonusUniqueActive",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_IGNORE_PHYSICAL_ARMOR",
           "value": "48",
-          "description": "GetModifierIgnorePhysicalArmor"
+          "luafunction": "GetModifierIgnorePhysicalArmor",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_MAGICAL_RESISTANCE_DIRECT_MODIFICATION",
           "value": "49",
-          "description": "GetModifierMagicalResistanceDirectModification"
+          "luafunction": "GetModifierMagicalResistanceDirectModification",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS",
           "value": "50",
-          "description": "GetModifierMagicalResistanceBonus"
+          "luafunction": "GetModifierMagicalResistanceBonus",
+          "description": "Increases the magical resistance of the parent by a constant returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_MAGICAL_RESISTANCE_DECREPIFY_UNIQUE",
           "value": "51",
-          "description": "GetModifierMagicalResistanceDecrepifyUnique"
+          "luafunction": "GetModifierMagicalResistanceDecrepifyUnique",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_BASE_MANA_REGEN",
           "value": "52",
-          "description": "GetModifierBaseRegen"
+          "luafunction": "GetModifierBaseRegen",
+          "description": "Increases the base mana regeneration of the parent by a constant returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT",
           "value": "53",
-          "description": "GetModifierConstantManaRegen"
+          "luafunction": "GetModifierConstantManaRegen",
+          "description": "Increases the mana regeneration of the parent by a constant returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT_UNIQUE",
           "value": "54",
-          "description": "GetModifierConstantManaRegenUnique"
+          "luafunction": "GetModifierConstantManaRegenUnique",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_MANA_REGEN_PERCENTAGE",
           "value": "55",
-          "description": "GetModifierPercentageManaRegen"
+          "luafunction": "GetModifierPercentageManaRegen",
+          "description": "Increases the mana regeneration of the parent by a percentage returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE",
           "value": "56",
-          "description": "GetModifierTotalPercentageManaRegen"
+          "luafunction": "GetModifierTotalPercentageManaRegen",
+          "description": "Increases the total mana regeneration of the parent by a percentage returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT",
           "value": "57",
-          "description": "GetModifierConstantHealthRegen"
+          "luafunction": "GetModifierConstantHealthRegen",
+          "description": "Increases the health regeneration of the parent by a constant returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE",
           "value": "58",
-          "description": "GetModifierHealthRegenPercentage"
+          "luafunction": "GetModifierHealthRegenPercentage",
+          "description": "Increases the evasion of the parent by a percentage returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_HEALTH_BONUS",
           "value": "59",
-          "description": "GetModifierHealthBonus"
+          "luafunction": "GetModifierHealthBonus",
+          "description": "Increases the maximum health of the parent by a constant returned to it. Can return negative values. Health is scaled to the same percentage as before the increase."
         },
         {
           "name": "MODIFIER_PROPERTY_MANA_BONUS",
           "value": "60",
-          "description": "GetModifierManaBonus"
+          "luafunction": "GetModifierManaBonus",
+          "description": "Increases the maximum mana of the parent by a constant returned to it. Can return negative values. Mana is scaled to the same percentage as before the increase."
         },
         {
           "name": "MODIFIER_PROPERTY_EXTRA_STRENGTH_BONUS",
           "value": "61",
-          "description": "GetModifierExtraStrengthBonus"
+          "luafunction": "GetModifierExtraStrengthBonus",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_EXTRA_HEALTH_BONUS",
           "value": "62",
-          "description": "GetModifierExtraHealthBonus"
+          "luafunction": "GetModifierExtraHealthBonus",
+          "description": "Increases the maximum health of the parent by a constant returned to it. Can return negative values. Ignores current health."
         },
         {
           "name": "MODIFIER_PROPERTY_EXTRA_MANA_BONUS",
           "value": "63",
-          "description": "GetModifierExtraManaBonus"
+          "luafunction": "GetModifierExtraManaBonus",
+          "description": "Increases the maximum mana of the parent by a constant returned to it. Can return negative values. Ignores current mana."
         },
         {
           "name": "MODIFIER_PROPERTY_EXTRA_HEALTH_PERCENTAGE",
           "value": "64",
-          "description": "GetModifierExtraHealthPercentage"
+          "luafunction": "GetModifierExtraHealthPercentage",
+          "description": "Increases the maximum health of the parent by a percentage returned to it. Can return negative values. Ignores current health."
         },
         {
           "name": "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS",
           "value": "65",
-          "description": "GetModifierBonusStats_Strength"
+          "luafunction": "GetModifierBonusStats_Strength",
+          "description": "Increases the strength stat of the parent by a constant returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_STATS_AGILITY_BONUS",
           "value": "66",
-          "description": "GetModifierBonusStats_Agility"
+          "luafunction": "GetModifierBonusStats_Agility",
+          "description": "Increases the agility stat of the parent by a constant returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS",
           "value": "67",
-          "description": "GetModifierBonusStats_Intellect"
+          "luafunction": "GetModifierBonusStats_Intellect",
+          "description": "Increases the intelligence stat of the parent by a constant returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_CAST_RANGE_BONUS",
           "value": "68",
-          "description": "GetModifierCastRangeBonus"
+          "luafunction": "GetModifierCastRangeBonus",
+          "description": "Increases the cast range of the parent by a constant returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_CAST_RANGE_BONUS_STACKING",
           "value": "69",
-          "description": "GetModifierCastRangeBonusStacking"
+          "luafunction": "GetModifierCastRangeBonusStacking",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_ATTACK_RANGE_BONUS",
           "value": "70",
-          "description": "GetModifierAttackRangeBonus"
+          "luafunction": "GetModifierAttackRangeBonus",
+          "description": "Increases the attack range of the parent by a constant returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_ATTACK_RANGE_BONUS_UNIQUE",
           "value": "71",
-          "description": "GetModifierAttackRangeBonusUnique"
+          "luafunction": "GetModifierAttackRangeBonusUnique",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_MAX_ATTACK_RANGE",
           "value": "72",
-          "description": "GetModifierMaxAttackRange"
+          "luafunction": "GetModifierMaxAttackRange",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_PROJECTILE_SPEED_BONUS",
           "value": "73",
-          "description": "GetModifierProjectileSpeedBonus"
+          "luafunction": "GetModifierProjectileSpeedBonus",
+          "description": "Increases the projectile speed of attacks sourced by the parent by a constant returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_REINCARNATION",
           "value": "74",
-          "description": "ReincarnateTime"
+          "luafunction": "ReincarnateTime",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_RESPAWNTIME",
           "value": "75",
-          "description": "GetModifierConstantRespawnTime"
+          "luafunction": "GetModifierConstantRespawnTime",
+          "description": "Increases the respawn time of the parent by a constant returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_RESPAWNTIME_PERCENTAGE",
           "value": "76",
-          "description": "GetModifierPercentageRespawnTime"
+          "luafunction": "GetModifierPercentageRespawnTime",
+          "description": "Increases the respawn time of the parent by a percentage returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_RESPAWNTIME_STACKING",
           "value": "77",
-          "description": "GetModifierStackingRespawnTime"
+          "luafunction": "GetModifierStackingRespawnTime",
+          "description": "Increases the respawn time of the parent by a constant returned to it. Can return negative values. Stacks with other modifiers."
         },
         {
           "name": "MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE",
           "value": "78",
-          "description": "GetModifierPercentageCooldown"
+          "luafunction": "GetModifierPercentageCooldown",
+          "description": "Increases the cooldown of the parent by a percentage returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE_STACKING",
           "value": "79",
-          "description": "GetModifierPercentageCooldownStacking"
+          "luafunction": "GetModifierPercentageCooldownStacking",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_CASTTIME_PERCENTAGE",
           "value": "80",
-          "description": "GetModifierPercentageCasttime"
+          "luafunction": "GetModifierPercentageCasttime",
+          "description": "Increases the cast time of the parent's abilities by a percentage returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_MANACOST_PERCENTAGE",
           "value": "81",
-          "description": "GetModifierPercentageManacost"
+          "luafunction": "GetModifierPercentageManacost",
+          "description": "Increases the mana cost of the parent's abilities by a percentage returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_DEATHGOLDCOST",
           "value": "82",
-          "description": "GetModifierConstantDeathGoldCost"
+          "luafunction": "GetModifierConstantDeathGoldCost",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_EXP_RATE_BOOST",
           "value": "83",
-          "description": "GetModifierPercentageExpRateBoost"
+          "luafunction": "GetModifierPercentageExpRateBoost",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE",
           "value": "84",
-          "description": "GetModifierPreAttack_CriticalStrike"
+          "luafunction": "GetModifierPreAttack_CriticalStrike",
+          "description": "Procs a critical strike dealing the extra damage returned to it."
         },
         {
           "name": "MODIFIER_PROPERTY_PREATTACK_TARGET_CRITICALSTRIKE",
           "value": "85",
-          "description": "GetModifierPreAttack_Target_CriticalStrike"
+          "luafunction": "GetModifierPreAttack_Target_CriticalStrike",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_MAGICAL_CONSTANT_BLOCK",
           "value": "86",
-          "description": "GetModifierMagical_ConstantBlock"
+          "luafunction": "GetModifierMagical_ConstantBlock",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK",
           "value": "87",
-          "description": "GetModifierPhysical_ConstantBlock"
+          "luafunction": "GetModifierPhysical_ConstantBlock",
+          "description": "Blocks damage the parent takes by a constant returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK_SPECIAL",
           "value": "88",
-          "description": "GetModifierPhysical_ConstantBlockSpecial"
+          "luafunction": "GetModifierPhysical_ConstantBlockSpecial",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_TOTAL_CONSTANT_BLOCK_UNAVOIDABLE_PRE_ARMOR",
           "value": "89",
-          "description": "GetModifierPhysical_ConstantBlockUnavoidablePreArmor"
+          "luafunction": "GetModifierPhysical_ConstantBlockUnavoidablePreArmor",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_TOTAL_CONSTANT_BLOCK",
           "value": "90",
-          "description": "GetModifierTotal_ConstantBlock"
+          "luafunction": "GetModifierTotal_ConstantBlock",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_OVERRIDE_ANIMATION",
           "value": "91",
-          "description": "GetOverrideAnimation"
+          "luafunction": "GetOverrideAnimation",
+          "description": "Forces the parent to play a specific animation."
         },
         {
           "name": "MODIFIER_PROPERTY_OVERRIDE_ANIMATION_WEIGHT",
           "value": "92",
-          "description": "GetOverrideAnimationWeight"
+          "luafunction": "GetOverrideAnimationWeight",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_OVERRIDE_ANIMATION_RATE",
           "value": "93",
-          "description": "GetOverrideAnimationRate"
+          "luafunction": "GetOverrideAnimationRate",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_ABSORB_SPELL",
           "value": "94",
-          "description": "GetAbsorbSpell"
+          "luafunction": "GetAbsorbSpell",
+          "description": "Allows the parent to ignore targeted abilities. (Similar to linken's sphere)"
         },
         {
           "name": "MODIFIER_PROPERTY_REFLECT_SPELL",
           "value": "95",
-          "description": "GetReflectSpell"
+          "luafunction": "GetReflectSpell",
+          "description": "Allows the parent to reflect targeted abilities. (Similar to Lotus Orb)"
         },
         {
           "name": "MODIFIER_PROPERTY_DISABLE_AUTOATTACK",
           "value": "96",
-          "description": "GetDisableAutoAttack"
+          "luafunction": "GetDisableAutoAttack",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_BONUS_DAY_VISION",
           "value": "97",
-          "description": "GetBonusDayVision"
+          "luafunction": "GetBonusDayVision",
+          "description": "Increases the vision of the parent during the day by a constant returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_BONUS_NIGHT_VISION",
           "value": "98",
-          "description": "GetBonusNightVision"
+          "luafunction": "GetBonusNightVision",
+          "description": "Increases the vision of the parent during the night by a constant returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_BONUS_NIGHT_VISION_UNIQUE",
           "value": "99",
-          "description": "GetBonusNightVisionUnique"
+          "luafunction": "GetBonusNightVisionUnique",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_BONUS_VISION_PERCENTAGE",
           "value": "100",
-          "description": "GetBonusVisionPercentage"
+          "luafunction": "GetBonusVisionPercentage",
+          "description": "Increases the vision of the parent by a percentage returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_FIXED_DAY_VISION",
           "value": "101",
-          "description": "GetFixedDayVision"
+          "luafunction": "GetFixedDayVision",
+          "description": "Sets the vision of the parent during the day to a fixed value returned to it. Cannot be changed by any means."
         },
         {
           "name": "MODIFIER_PROPERTY_FIXED_NIGHT_VISION",
           "value": "102",
-          "description": "GetFixedNightVision"
+          "luafunction": "GetFixedNightVision",
+          "description": "Sets the vision of the parent during the night to a fixed value returned to it. Cannot be changed by any means."
         },
         {
           "name": "MODIFIER_PROPERTY_MIN_HEALTH",
           "value": "103",
-          "description": "GetMinHealth"
+          "luafunction": "GetMinHealth",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PHYSICAL",
           "value": "104",
-          "description": "GetAbsoluteNoDamagePhysical"
+          "luafunction": "GetAbsoluteNoDamagePhysical",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_MAGICAL",
           "value": "105",
-          "description": "GetAbsoluteNoDamageMagical"
+          "luafunction": "GetAbsoluteNoDamageMagical",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PURE",
           "value": "106",
-          "description": "GetAbsoluteNoDamagePure"
+          "luafunction": "GetAbsoluteNoDamagePure",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_IS_ILLUSION",
           "value": "107",
-          "description": "GetIsIllusion"
+          "luafunction": "GetIsIllusion",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_ILLUSION_LABEL",
           "value": "108",
-          "description": "GetModifierIllusionLabel"
+          "luafunction": "GetModifierIllusionLabel",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_SUPER_ILLUSION",
           "value": "109",
-          "description": "GetModifierSuperIllusion"
+          "luafunction": "GetModifierSuperIllusion",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_SUPER_ILLUSION_WITH_ULTIMATE",
           "value": "110",
-          "description": "GetModifierSuperIllusionWithUltimate"
+          "luafunction": "GetModifierSuperIllusionWithUltimate",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_TURN_RATE_PERCENTAGE",
           "value": "111",
-          "description": "GetModifierTurnRate_Percentage"
+          "luafunction": "GetModifierTurnRate_Percentage",
+          "description": "Increases the turn rate of the parent by a percentage returned to it. Can return negative values."
         },
         {
           "name": "MODIFIER_PROPERTY_DISABLE_HEALING",
           "value": "112",
-          "description": "GetDisableHealing"
+          "luafunction": "GetDisableHealing",
+          "description": "Negates healing applied to the parent."
         },
         {
           "name": "MODIFIER_PROPERTY_ALWAYS_ALLOW_ATTACK",
           "value": "113",
-          "description": "GetAlwaysAllowAttack"
+          "luafunction": "GetAlwaysAllowAttack",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_OVERRIDE_ATTACK_MAGICAL",
           "value": "114",
-          "description": "GetOverrideAttackMagical"
+          "luafunction": "GetOverrideAttackMagical",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_UNIT_STATS_NEEDS_REFRESH",
           "value": "115",
-          "description": "GetModifierUnitStatsNeedsRefresh"
+          "luafunction": "GetModifierUnitStatsNeedsRefresh",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_BOUNTY_CREEP_MULTIPLIER",
           "value": "116",
-          "description": "GetModifierBountyCreepMultiplier"
+          "luafunction": "GetModifierBountyCreepMultiplier",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_BOUNTY_OTHER_MULTIPLIER",
           "value": "117",
-          "description": "GetModifierBountyOtherMultiplier"
+          "luafunction": "GetModifierBountyOtherMultiplier",
+          "description": ""
         },
         {
           "name": "MODIFIER_EVENT_ON_SPELL_TARGET_READY",
           "value": "118",
-          "description": "OnSpellTargetReady"
+          "luafunction": "OnSpellTargetReady",
+          "description": ""
         },
         {
           "name": "MODIFIER_EVENT_ON_ATTACK_RECORD",
           "value": "119",
-          "description": "OnAttackRecord"
+          "luafunction": "OnAttackRecord",
+          "description": ""
         },
         {
           "name": "MODIFIER_EVENT_ON_ATTACK_START",
           "value": "120",
-          "description": "OnAttackStart"
+          "luafunction": "OnAttackStart",
+          "description": "Event that fires when an attack starts."
         },
         {
           "name": "MODIFIER_EVENT_ON_ATTACK",
           "value": "121",
-          "description": "OnAttack"
+          "luafunction": "OnAttack",
+          "description": "Event that fires when an attack was completed, regardless of the result of it."
         },
         {
           "name": "MODIFIER_EVENT_ON_ATTACK_LANDED",
           "value": "122",
-          "description": "OnAttackLanded"
+          "luafunction": "OnAttackLanded",
+          "description": "Event that fires when an attack landed on its target successfully."
         },
         {
           "name": "MODIFIER_EVENT_ON_ATTACK_FAIL",
           "value": "123",
-          "description": "OnAttackFail"
+          "luafunction": "OnAttackFail",
+          "description": "Event that fires when an attack failed to land on its target."
         },
         {
           "name": "MODIFIER_EVENT_ON_ATTACK_ALLIED",
           "value": "124",
-          "description": "OnAttackAllied"
+          "luafunction": "OnAttackAllied",
+          "description": "Event that fires when attacking allies."
         },
         {
           "name": "MODIFIER_EVENT_ON_PROJECTILE_DODGE",
           "value": "125",
-          "description": "OnProjectileDodge"
+          "luafunction": "OnProjectileDodge",
+          "description": "Event that fires when dodging a projectile. (Disjointing it)"
         },
         {
           "name": "MODIFIER_EVENT_ON_ORDER",
           "value": "126",
-          "description": "OnOrder"
+          "luafunction": "OnOrder",
+          "description": "Event that fires when an order is given to the parent."
         },
         {
           "name": "MODIFIER_EVENT_ON_UNIT_MOVED",
           "value": "127",
-          "description": "OnUnitMoved"
+          "luafunction": "OnUnitMoved",
+          "description": "Event that fires when a unit moved."
         },
         {
           "name": "MODIFIER_EVENT_ON_ABILITY_START",
           "value": "128",
-          "description": "OnAbilityStart"
+          "luafunction": "OnAbilityStart",
+          "description": "Event that fires when starting to use an ability."
         },
         {
           "name": "MODIFIER_EVENT_ON_ABILITY_EXECUTED",
           "value": "129",
-          "description": "OnAbilityExecuted"
+          "luafunction": "OnAbilityExecuted",
+          "description": "Event that fires when finishing the ability phase stage of the ability."
         },
         {
           "name": "MODIFIER_EVENT_ON_ABILITY_FULLY_CAST",
           "value": "130",
-          "description": "OnAbilityFullyCast"
+          "luafunction": "OnAbilityFullyCast",
+          "description": "Event that fires when the ability has completely activated."
         },
         {
           "name": "MODIFIER_EVENT_ON_BREAK_INVISIBILITY",
           "value": "131",
-          "description": "OnBreakInvisibility"
+          "luafunction": "OnBreakInvisibility",
+          "description": "Event that fires when breaking invisibility."
         },
         {
           "name": "MODIFIER_EVENT_ON_ABILITY_END_CHANNEL",
           "value": "132",
-          "description": "OnAbilityEndChannel"
+          "luafunction": "OnAbilityEndChannel",
+          "description": "Event that fires when finishing a channel."
         },
         {
           "name": "MODIFIER_EVENT_ON_PROCESS_UPGRADE",
           "value": "133",
+          "luafunction": "",
           "description": ""
         },
         {
           "name": "MODIFIER_EVENT_ON_REFRESH",
           "value": "134",
+          "luafunction": "",
           "description": ""
         },
         {
           "name": "MODIFIER_EVENT_ON_TAKEDAMAGE",
           "value": "135",
-          "description": "OnTakeDamage"
+          "luafunction": "OnTakeDamage",
+          "description": "Event that fires when taking damage."
         },
         {
           "name": "MODIFIER_EVENT_ON_STATE_CHANGED",
           "value": "136",
-          "description": "OnStateChanged"
+          "luafunction": "OnStateChanged",
+          "description": "Event that fires when a state is changed."
         },
         {
           "name": "MODIFIER_EVENT_ON_ORB_EFFECT",
           "value": "137",
+          "luafunction": "",
           "description": ""
         },
         {
           "name": "MODIFIER_EVENT_ON_ATTACKED",
           "value": "138",
-          "description": "OnAttacked"
+          "luafunction": "OnAttacked",
+          "description": "Event that fires when being attacked."
         },
         {
           "name": "MODIFIER_EVENT_ON_DEATH",
           "value": "139",
-          "description": "OnDeath"
+          "luafunction": "OnDeath",
+          "description": "Event that fires when dying."
         },
         {
           "name": "MODIFIER_EVENT_ON_RESPAWN",
           "value": "140",
-          "description": "OnRespawn"
+          "luafunction": "OnRespawn",
+          "description": "Event that fires when respawning."
         },
         {
           "name": "MODIFIER_EVENT_ON_SPENT_MANA",
           "value": "141",
-          "description": "OnSpentMana"
+          "luafunction": "OnSpentMana",
+          "description": "Event that fires when spending mana on items or abilities."
         },
         {
           "name": "MODIFIER_EVENT_ON_TELEPORTING",
           "value": "142",
-          "description": "OnTeleporting"
+          "luafunction": "OnTeleporting",
+          "description": "Event that fires when starting to teleporting."
         },
         {
           "name": "MODIFIER_EVENT_ON_TELEPORTED",
           "value": "143",
-          "description": "OnTeleported"
+          "luafunction": "OnTeleported",
+          "description": "Event that fires when completing a teleport."
         },
         {
           "name": "MODIFIER_EVENT_ON_SET_LOCATION",
           "value": "144",
-          "description": "OnSetLocation"
+          "luafunction": "OnSetLocation",
+          "description": ""
         },
         {
           "name": "MODIFIER_EVENT_ON_HEALTH_GAINED",
           "value": "145",
-          "description": "OnHealthGained"
+          "luafunction": "OnHealthGained",
+          "description": ""
         },
         {
           "name": "MODIFIER_EVENT_ON_MANA_GAINED",
           "value": "146",
-          "description": "OnManaGained"
+          "luafunction": "OnManaGained",
+          "description": ""
         },
         {
           "name": "MODIFIER_EVENT_ON_TAKEDAMAGE_KILLCREDIT",
           "value": "147",
-          "description": "OnTakeDamageKillCredit"
+          "luafunction": "OnTakeDamageKillCredit",
+          "description": ""
         },
         {
           "name": "MODIFIER_EVENT_ON_HERO_KILLED",
           "value": "148",
-          "description": "OnHeroKilled"
+          "luafunction": "OnHeroKilled",
+          "description": "Event that fires when a hero is killed."
         },
         {
           "name": "MODIFIER_EVENT_ON_HEAL_RECEIVED",
           "value": "149",
-          "description": "OnHealReceived"
+          "luafunction": "OnHealReceived",
+          "description": "Event that fires when being healed."
         },
         {
           "name": "MODIFIER_EVENT_ON_BUILDING_KILLED",
           "value": "150",
-          "description": "OnBuildingKilled"
+          "luafunction": "OnBuildingKilled",
+          "description": "Event that fires when a building is destroyed."
         },
         {
           "name": "MODIFIER_EVENT_ON_MODEL_CHANGED",
           "value": "151",
-          "description": "OnModelChanged"
+          "luafunction": "OnModelChanged",
+          "description": "Event that fires when the model changes."
         },
         {
           "name": "MODIFIER_EVENT_ON_MODIFIER_ADDED",
           "value": "152",
-          "description": "OnModifierAdded"
+          "luafunction": "OnModifierAdded",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_TOOLTIP",
           "value": "153",
-          "description": "OnTooltip"
+          "luafunction": "OnTooltip",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_MODEL_CHANGE",
           "value": "154",
-          "description": "GetModifierModelChange"
+          "luafunction": "GetModifierModelChange",
+          "description": "Changes the parent's model."
         },
         {
           "name": "MODIFIER_PROPERTY_MODEL_SCALE",
           "value": "155",
-          "description": "GetModifierModelScale"
+          "luafunction": "GetModifierModelScale",
+          "description": "Changes the parent's model scale."
         },
         {
           "name": "MODIFIER_PROPERTY_IS_SCEPTER",
           "value": "156",
-          "description": "GetModifierScepter"
+          "luafunction": "GetModifierScepter",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_TRANSLATE_ACTIVITY_MODIFIERS",
           "value": "157",
-          "description": "GetActivityTranslationModifiers"
+          "luafunction": "GetActivityTranslationModifiers",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_TRANSLATE_ATTACK_SOUND",
           "value": "158",
-          "description": "GetAttackSound"
+          "luafunction": "GetAttackSound",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_LIFETIME_FRACTION",
           "value": "159",
-          "description": "GetUnitLifetimeFraction"
+          "luafunction": "GetUnitLifetimeFraction",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_PROVIDES_FOW_POSITION",
           "value": "160",
-          "description": "GetModifierProvidesFOWVision"
+          "luafunction": "GetModifierProvidesFOWVision",
+          "description": "Return 1 if parent's model would show to his enemies."
         },
         {
           "name": "MODIFIER_PROPERTY_SPELLS_REQUIRE_HP",
           "value": "161",
-          "description": "GetModifierSpellsRequireHP"
+          "luafunction": "GetModifierSpellsRequireHP",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_FORCE_DRAW_MINIMAP",
           "value": "162",
-          "description": "GetForceDrawOnMinimap"
+          "luafunction": "GetForceDrawOnMinimap",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_DISABLE_TURNING",
           "value": "163",
-          "description": "GetModifierDisableTurning"
+          "luafunction": "GetModifierDisableTurning",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_IGNORE_CAST_ANGLE",
           "value": "164",
-          "description": "GetModifierIgnoreCastAngle"
+          "luafunction": "GetModifierIgnoreCastAngle",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_CHANGE_ABILITY_VALUE",
           "value": "165",
-          "description": "GetModifierChangeAbilityValue"
+          "luafunction": "GetModifierChangeAbilityValue",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_ABILITY_LAYOUT",
           "value": "166",
-          "description": "GetModifierAbilityLayout"
+          "luafunction": "GetModifierAbilityLayout",
+          "description": "Changes the ability layout."
         },
         {
           "name": "MODIFIER_EVENT_ON_DOMINATED",
           "value": "167",
-          "description": "OnDominated"
+          "luafunction": "OnDominated",
+          "description": "An event that fires when a unit is being dominated."
         },
         {
           "name": "MODIFIER_PROPERTY_TEMPEST_DOUBLE",
           "value": "168",
-          "description": "GetModifierTempestDouble"
+          "luafunction": "GetModifierTempestDouble",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_PRESERVE_PARTICLES_ON_MODEL_CHANGE",
           "value": "169",
-          "description": "PreserveParticlesOnModelChanged"
+          "luafunction": "PreserveParticlesOnModelChanged",
+          "description": ""
         },
         {
           "name": "MODIFIER_EVENT_ON_ATTACK_FINISHED",
           "value": "170",
-          "description": "OnAttackFinished"
+          "luafunction": "OnAttackFinished",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_IGNORE_COOLDOWN",
           "value": "171",
-          "description": "GetModifierIgnoreCooldown"
+          "luafunction": "GetModifierIgnoreCooldown",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_CAN_ATTACK_TREES",
           "value": "172",
-          "description": "GetModifierCanAttackTrees"
+          "luafunction": "GetModifierCanAttackTrees",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_VISUAL_Z_DELTA",
           "value": "173",
-          "description": "GetVisualZDelta"
+          "luafunction": "GetVisualZDelta",
+          "description": ""
         },
         {
           "name": "MODIFIER_PROPERTY_INCOMING_DAMAGE_ILLUSION",
           "value": "174",
+          "luafunction": "",
           "description": ""
         },
         {
           "name": "MODIFIER_FUNCTION_LAST",
           "value": "175",
+          "luafunction": "",
           "description": ""
         },
         {
           "name": "MODIFIER_FUNCTION_INVALID",
           "value": "255",
+          "luafunction": "",
           "description": ""
         }
       ]
