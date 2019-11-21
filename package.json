@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://pohka.github.io/my-app/",
+  "homepage": "https://pohka.github.io/",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "react": "^16.10.2",

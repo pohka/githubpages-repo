@@ -112,16 +112,12 @@ table a:hover
 
 .func-api-link
 {
-  position: absolute;
-  margin-left: 306px;
-  margin-top: -36px;
+  float:right;
   height: 24px;
   width: 24px;
   line-height: 24px;
   user-select: none;
-  line-height: 20px;
-  padding: 4px 4px;
-  padding-top:8px;
+  padding: 6px 6px;
   text-align: center;
 }
 
