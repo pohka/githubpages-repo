@@ -1,0 +1,32 @@
+.apisearch-item
+{
+  width: 100%;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+.apisearch-item:hover
+{
+  background: var(--hover);
+}
+
+
+.apisearch-con
+{
+  height: 0px;
+  max-height: 0px;
+  overflow-y: scroll;
+  
+  
+  transition: 0.15s ease-out;
+  transform: scaleX(1);
+}
+
+.apisearch-con.active
+{
+  transform: scaleX(1);
+  height: 100%;
+  max-height: 300px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid var(--color_table_border);
+}

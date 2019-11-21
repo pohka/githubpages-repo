@@ -20,9 +20,10 @@ class Category extends Component
       var href = "https://developer.valvesoftware.com/wiki/Dota_2_Workshop_Tools/Scripting/API/" +
         this.props.data.title + "." + func;
 
+      var scrollID = this.props.data.title + "-" + func;
       rows.push(
         <tr key={key} id={id}>
-          <td className="col-function">
+          <td className="col-function" id={scrollID}>
             {func}
             <a href={href} className="func-api-link" target="_blank"  rel="noopener noreferrer"><Icon size={20} icon={externalLink} /></a>
           </td>

@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import './Navbar.css';
 import data from './../output.json';
 import ScrollTo from "./Scroll";
+import ApiSearch from "./ApiSearch.js";
 
 class Navbar extends Component {
   constructor(props)
   {
     super(props);
     this.currentOption = this.props.menu;
+    this.search="";
     this.state = { option : this.props.menu };
   }
 
@@ -177,15 +179,24 @@ class Navbar extends Component {
     )
   }
 
+  handleSearchInput(e, comp)
+  {
+    var val = e.target.value;
+    comp.search = val;
+    comp.forceUpdate();
+  }
+
   render()
   {
     return(
       <div className="navbar">
-        {this.getMenu()}
+        
         <div className="sidenav-search">
           <div className="search-icon no-select">></div>
-          <input type="text" placeholder="search.."></input>
+          <input type="text" id="searchbar" placeholder="search.." onChange={(e)=>{this.handleSearchInput(e, this)}}></input>
         </div>
+        <ApiSearch search={this.search}></ApiSearch>
+        {this.getMenu()}
         <div className="navbar-rows-con">{this.getRows()}</div>
       </div>
     );
