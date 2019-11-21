@@ -8,8 +8,17 @@ class ApiSearch extends Component
   handleClick(e)
   {
     var id = e.target.getAttribute("scrollid");
+    var offset = e.target.getAttribute("scrollOffset");
+    if(offset == null)
+    {
+      offset = 0;
+    }
+    else
+    {
+      offset = parseInt(offset)
+    }
     console.log("scrolling to:", id);
-    ScrollTo(id);
+    ScrollTo(id, offset);
   }
 
   search()
@@ -55,7 +64,7 @@ class ApiSearch extends Component
             var text =  className + ":" + key;
             var scrollID = className + "-" + key;
             result.push(
-              <div className="apisearch-item" scrollid={scrollID} onClick={this.handleClick}>
+              <div className="apisearch-item" scrollid={scrollID} scrollOffset="-6" onClick={this.handleClick}>
                 {text}
               </div>
             );

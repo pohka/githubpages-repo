@@ -8,11 +8,29 @@ import MainNav from "./components/MainNav.js"
 import KVPage from "./components/KVPage"
 import ScrollTo from "./components/Scroll.js"
 import Home from "./components/Home.js"
+import DotaHome from "./components/DotaHome.js"
 
 
 function addRoutes()
 {
   Router.init();
+
+  Router.addRoute({
+    name: "dota-home",
+    path: "/dota/",
+    dom: function () {
+      return (
+        <div>
+          <MainNav></MainNav>
+          <DotaHome></DotaHome>
+        </div>
+      );
+    },
+    meta : {
+      title : "Home - DCG Tools"
+    }
+  });
+
   Router.addRoute({
     name: "dota-api",
     path: "/dota/api",
@@ -29,6 +47,7 @@ function addRoutes()
       title : "API - DCG Tools"
     }
   });
+  
 
   Router.addRoute({
     name: "dota-kv-checker",
