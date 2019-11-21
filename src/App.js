@@ -9,6 +9,7 @@ import KVPage from "./components/KVPage"
 import ScrollTo from "./components/Scroll.js"
 import Home from "./components/Home.js"
 import DotaHome from "./components/DotaHome.js"
+import DotaMarkdown from './components/DotaMarkdown';
 
 
 function addRoutes()
@@ -40,6 +41,38 @@ function addRoutes()
           <MainNav></MainNav>
           <API></API>
           <APINavbar menu="all"></APINavbar>
+        </div>
+      );
+    },
+    meta : {
+      title : "API - DCG Tools"
+    }
+  });
+
+  Router.addRoute({
+    name: "dota-videos",
+    path: "/dota/videos",
+    dom : function () {
+      return (
+        <div>
+          <MainNav></MainNav>
+          <div>video here</div>
+        </div>
+      );
+    },
+    meta : {
+      title : "API - DCG Tools"
+    }
+  });
+
+  Router.addRoute({
+    name: "dota-libs",
+    path: "/dota/libs",
+    dom : function () {
+      return (
+        <div>
+          <MainNav></MainNav>
+          <DotaMarkdown></DotaMarkdown>
         </div>
       );
     },

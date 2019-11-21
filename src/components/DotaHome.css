@@ -1,9 +1,53 @@
 .dota-home-con
 {
   width: 800px;
-  padding: 10px;
+  padding: 10px 50px;
   margin: 0 auto;
-  margin-top: 50px;
-  
+  margin-top: 44px;
+  background: rgb(53, 53, 53);
   text-align: left;
+}
+
+.dota-home-con a
+{
+  display: block;
+  text-decoration: none;
+  color: var(--color_text);
+  padding: 8px 12px;
+  font-size: 18px;
+  background: var(--hover);
+  margin: 5px 0px;
+  padding-left: 70px;
+  border-radius: 4px;
+}
+
+.dota-home-con a:hover
+{
+  background: var(--color_table_heading);
+  color: white;
+}
+
+.dota-home-item-desc
+{
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+.dota-home-item-title
+{
+  
+}
+
+.dota-home-item-icon
+{
+  position: absolute;
+  margin-left: -55px;
+  margin-top: 10px;
+}
+
+.dota-home-item-icon-small
+{
+  position: absolute;
+  margin-left: -48px;
+  margin-top: -2px;
 }

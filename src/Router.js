@@ -58,7 +58,7 @@ class Router extends Component
 
   static setRoute(route)
   {
-    window.history.pushState({}, route.meta.title, route.path);
+    window.history.pushState({}, route.meta.title, route.path + window.location.hash);
     ReactDOM.render(route.dom(), document.getElementById("root"))
     document.body.scrollTop = document.documentElement.scrollTop = 0;
   }

@@ -5,8 +5,10 @@ Load into your dota custom game quickly while in tools mode. This will allow you
 
 ---
 
-### addon\_game\_mode.lua
-```
+### addon\_game _mode.lua
+```lua
+require("GameSetup")
+
 function myaddon:InitGameMode()
 	GameSetup:init() --initialize setup
 end

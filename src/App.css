@@ -15,6 +15,13 @@ body
 {
   background: var(--color_background);
   color: var(--color_text);
+  overflow-y: scroll;
+}
+
+h1
+{
+  margin-top: 0px;
+  padding-top: 18px;
 }
 
 .App {
