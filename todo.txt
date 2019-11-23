@@ -1,7 +1,4 @@
 -footer for home page
--other code samples
 -youtube video series page
 -meta tags
 -fix navigaction bug with hashes
--custom markdown parser
--css for libs pages

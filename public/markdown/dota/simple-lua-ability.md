@@ -58,8 +58,8 @@ end
   //overriding hero wraith king
   "wraith_king"
   {
-		"override_hero"   "npc_dota_hero_skeleton_king"
-		"Ability1"        "my_spell_name"
+    "override_hero"   "npc_dota_hero_skeleton_king"
+    "Ability1"        "my_spell_name"
   }
 }
 

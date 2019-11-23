@@ -1,0 +1,58 @@
+.dota-video-con
+{
+  display: flex;
+  width: 1200px;
+  margin: 30px auto;
+  margin-bottom: 400px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dota-video-item
+{
+  display: block;
+  width: 360px;
+  margin: 50px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  color: var(--color_text);
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1.0px;
+  background: #555
+}
+
+.dota-video-item:hover
+{
+  transform: translate(0px, -4px);
+  background: rgb(66, 66, 66);
+  color: rgb(245, 245, 245);
+}
+
+.dota-video-title
+{
+  font-size: 18px;
+  margin: 12px 0px;
+  text-align: center;
+}
+
+.dota-video-media
+{
+  width: 100%;
+  border-radius: 4px;
+}
+
+.dota-video-media img
+{
+  width: 100%;
+  height: auto;
+}
+
+.play-btn
+{
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+  margin-top:-160px;
+}

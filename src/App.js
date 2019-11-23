@@ -10,6 +10,7 @@ import ScrollTo from "./components/Scroll.js"
 import Home from "./components/Home.js"
 import DotaHome from "./components/DotaHome.js"
 import DotaMarkdown from './components/DotaMarkdown';
+import DotaVideoCon from './components/DotaVideoCon';
 
 
 function addRoutes()
@@ -56,7 +57,7 @@ function addRoutes()
       return (
         <div>
           <MainNav></MainNav>
-          <div>video here</div>
+          <DotaVideoCon></DotaVideoCon>
         </div>
       );
     },
