@@ -12,20 +12,83 @@ class Markdown extends Component
 
   parseParagraph(lines, lastParagraphLine, curLineNum)
   {
+    //links, images and videos that are inline the text
     var paragraphText = "";
+    var content = [];
     for(let a=lastParagraphLine; a<curLineNum; a++)
     {
-      paragraphText += lines[a] + "\n";
+      var line = lines[a];
+      var linkMatches = [...line.matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)];
+      if(linkMatches.length > 0)
+      {
+        for(let b=0; b<linkMatches.length; b++)
+        {
+          let match = linkMatches[b];
+          var startIndex = line.indexOf(match[0]);
+          var prefix = null;
+          var linkText = match[1];
+          var linkHref = match[2];
+          if(startIndex > 0)
+          {
+            prefix = line[startIndex - 1];
+          }
+
+          //youtube video
+          if(prefix === "!")
+          {
+            var src = "https://www.youtube.com/embed/" + linkHref;
+            content.push(
+              <iframe className="embed-video" src={src} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            )
+            line = "";
+          }
+          //image
+          else if(prefix === "#")
+          {
+            content.push(<img src={linkHref} alt={linkText}></img>)
+            line = "";
+          }
+          else
+          {
+            if(startIndex > 0)
+            {
+              var prevText = line.substr(0, startIndex);
+              if(prevText.length > 0)
+              {
+                content.push(prevText);
+              }
+            }
+            content.push(<a href={linkHref}>{linkText}</a>);
+            line = line.substr(startIndex + match[0].length);
+          }
+        }
+
+        if(line.length > 0)
+        {
+          content.push(line);
+        }
+      }
+      else
+      {
+        content.push(lines[a] + "\n");
+      }
+    }
+
+    if(content.length == 1)
+    {
+      if(typeof content[0] !== "string")
+      {
+        return content[0];
+      }
     }
 
     return (
-      <p>{paragraphText.trim()}</p>
+      <p>{content}</p>
     );
   }
 
   parseCode(codeText, lang)
   {
-    //todo: links, images and videos that are inline the text
     var result = [];
     var keywords = [
       "and", "break", "do", "else", "elseif", 
@@ -126,8 +189,10 @@ class Markdown extends Component
     for(let i=0; i<lines.length; i++)
     {
       var line = lines[i].trim();
+
+      var headingMatch = line.match(/#+\s+/);
       //heading
-      if(line.startsWith("#") && lastLineType !== LINE_CODE)
+      if(headingMatch != null && headingMatch.index === 0 && lastLineType !== LINE_CODE)
       {
         if(lastLineType === LINE_PARAGRAPH)
         {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "./DotaHome.css";
+import "./libs.css";
 import Markdown from '../markdown-parser.js';
 
 class DotaMarkdown extends Component
@@ -30,10 +30,8 @@ class DotaMarkdown extends Component
 
   render()
   {
-    
-
     return(
-      <div className="dota-home-con">
+      <div className="dota-libs-con">
         <Markdown>{this.markdown}</Markdown>
       </div>
     );

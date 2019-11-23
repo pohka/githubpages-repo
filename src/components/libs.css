@@ -1,0 +1,41 @@
+.dota-libs-con
+{
+  width: 800px;
+  padding: 10px 50px;
+  margin: 0 auto;
+  margin-top: 44px;
+  background: rgb(53, 53, 53);
+  text-align: left;
+  font-size: 16px;
+}
+
+.dota-libs-con p
+{
+  margin: 14px auto;
+}
+
+.dota-libs-con a
+{
+  text-decoration: none;
+  color: rgb(246, 50, 50);
+}
+
+.dota-libs-con a:hover
+{
+  text-decoration: underline;
+}
+
+.dota-libs-con img
+{
+  display: block;
+  margin: 30px auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.embed-video
+{
+  height: 450px;
+  width: 800px;
+  margin: 30px auto;
+}
