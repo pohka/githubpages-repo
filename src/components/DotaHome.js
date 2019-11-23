@@ -23,7 +23,7 @@ class DotaHome extends Component
           <div className="dota-home-item-title">Query</div>
           <div className="dota-home-item-desc">Functions to simplify searching</div>
         </a>
-        <a href="/dota/libs#quick-loading">
+        <a href="/dota/libs#game-setup">
           <div className="dota-home-item-icon"><Icon size={28} icon={code} /></div>
           <div className="dota-home-item-title">GameSetup</div>
           <div className="dota-home-item-desc">Quick loading into custom games</div>

@@ -10,6 +10,10 @@
   --color_code: rgb(66, 66, 66);
 }
 
+@font-face {
+  font-family: SFMono-Regular;
+  src: url('SFMono-Regular.otf');
+}
 
 body
 {
@@ -59,12 +63,12 @@ h1
 
 code
 {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'SFMono-Regular', monospace;
   font-size:12px;
   letter-spacing: 0.0px;
   background: var(--color_code);
   display:block;
-  padding: 4px 6px;
+  padding: 6px 10px;
 }
 
 .no-select {

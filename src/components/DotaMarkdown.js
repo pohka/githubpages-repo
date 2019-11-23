@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./DotaHome.css";
-import Markdown from 'markdown-to-jsx';
+import Markdown from '../markdown-parser.js';
 
 class DotaMarkdown extends Component
 {
