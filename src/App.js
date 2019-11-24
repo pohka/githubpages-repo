@@ -62,7 +62,7 @@ function addRoutes()
       );
     },
     meta : {
-      title : "API - DCG Tools"
+      title : "Videos - DCG Tools"
     }
   });
 
@@ -78,7 +78,17 @@ function addRoutes()
       );
     },
     meta : {
-      title : "API - DCG Tools"
+      title : function(){
+        let hash = window.location.hash.substr(1);
+        let words = hash.split("-");
+        //to title case
+        for(let i=0; i<words.length; i++)
+        {
+          words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+        }
+        let title = words.join(" ") + " - DCG Tools";
+        return title;
+      }
     }
   });
   
@@ -125,6 +135,8 @@ document.fonts.onloadingdone = function (fontFaceSetEvent) {
 function App() {
   addRoutes();
 
+  var curRoute = Router.findRouteMatch(window.location.pathname)
+  Router.setRouteMetaData(curRoute);
 
   return (
     <div className="App">

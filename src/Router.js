@@ -56,6 +56,28 @@ class Router extends Component
     return route.dom();
   }
 
+  static setRouteMetaData(route)
+  {
+    var head = document.getElementsByTagName("head")[0];
+    
+    if(route.meta.title !== undefined)
+    {
+      var titleDom = head.getElementsByTagName("title")[0];
+      if(titleDom != null)
+      {
+        if(typeof route.meta.title === "function")
+        {
+          var text = route.meta.title();
+          titleDom.textContent = text;
+        }
+        else
+        {
+          titleDom.textContent = route.meta.title;
+        }
+      }
+    }
+  }
+
   static setRoute(route, hash)
   {
     var path = route.path;
@@ -64,6 +86,7 @@ class Router extends Component
       path += hash;
     }
     window.history.pushState({}, route.meta.title, path);
+    Router.setRouteMetaData(route);
     ReactDOM.render(route.dom(), document.getElementById("root"))
     document.body.scrollTop = document.documentElement.scrollTop = 0;
   }
