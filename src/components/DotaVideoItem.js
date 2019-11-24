@@ -10,12 +10,14 @@ class DotaVideoItem extends Component
   }
   render(){
     return(
-      <a href={this.link} className="dota-video-item">
+      <a href={this.link} target="_blank" className="dota-video-item">
+        
         <div className="dota-video-title">{this.props.title}</div>
+        <div className="play-btn"><img src="../play-btn.png"></img></div>
         <div className="dota-video-media">
           <img src={this.src}></img>
         </div>
-        <img className="play-btn" src="../play-btn.png"></img>
+        
       </a>
     )
   }

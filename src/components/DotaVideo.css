@@ -2,7 +2,7 @@
 {
   display: flex;
   width: 1200px;
-  margin: 30px auto;
+  margin: 50px auto;
   margin-bottom: 400px;
   flex-wrap: wrap;
   justify-content: center;
@@ -12,7 +12,7 @@
 {
   display: block;
   width: 360px;
-  margin: 50px 10px;
+  margin: 30px 10px;
   border-radius: 6px;
   cursor: pointer;
   transition: transform 0.3s;
@@ -20,7 +20,8 @@
   text-decoration: none;
   font-weight: bold;
   letter-spacing: 1.0px;
-  background: #555
+  background: #555;
+  height: 260px;
 }
 
 .dota-video-item:hover
@@ -51,8 +52,16 @@
 
 .play-btn
 {
-  display: block;
+  position: absolute;
+  width: 360px;
+  height: 200px;
+  margin-top: 50px;
+}
+
+.play-btn img
+{
+  height: 100px;
   width: 100px;
+  display: block;
   margin: 0 auto;
-  margin-top:-160px;
 }
