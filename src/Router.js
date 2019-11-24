@@ -9,7 +9,8 @@ class Router extends Component
   {
     window.addEventListener("popstate", function(e) {
       let route = Router.findRouteMatch(e.target.location.pathname);
-      Router.setRoute(route, window.location.pathname);
+      let hash = window.location.hash.substr(1)
+      Router.setRoute(route, hash, true);
     });
   }
   
@@ -58,11 +59,15 @@ class Router extends Component
 
   static setRouteMetaData(route)
   {
-    var head = document.getElementsByTagName("head")[0];
+    var els = document.getElementsByTagName("head");
+    if(els == null) return;
+    var head = els[0];
     
     if(route.meta.title !== undefined)
     {
-      var titleDom = head.getElementsByTagName("title")[0];
+      var els2 = head.getElementsByTagName("title");
+      if(els2 == null) return;
+      var titleDom = els2[0];
       if(titleDom != null)
       {
         if(typeof route.meta.title === "function")
@@ -78,14 +83,17 @@ class Router extends Component
     }
   }
 
-  static setRoute(route, hash)
+  static setRoute(route, hash, isHistory)
   {
-    var path = route.path;
-    if(hash !== undefined)
+    if(isHistory === undefined || isHistory === false)
     {
-      path += hash;
+      var path = route.path;
+      if(hash !== undefined)
+      {
+        path += "#" + hash;
+      }
+      window.history.pushState({}, route.meta.title, path);
     }
-    window.history.pushState({}, route.meta.title, path);
     Router.setRouteMetaData(route);
     ReactDOM.render(route.dom(), document.getElementById("root"))
     document.body.scrollTop = document.documentElement.scrollTop = 0;
@@ -93,13 +101,41 @@ class Router extends Component
 
   static handleClick(e)
   {
-    var routeName = e.target.getAttribute("route");
-    if(routeName !== null)
+    console.log(e.target)
+    var el = e.target;
+    while(el != null && el.getAttribute("route") == null)
     {
-      var route = Router.getRouteByName(routeName);
-      if(route !== null)
+      el = el.parentElement;
+    }
+
+    if(el != null)
+    {
+      var routeName = el.getAttribute("route");
+      var hash = el.getAttribute("hash");
+      
+      if(routeName != null)
       {
-        Router.setRoute(route);
+        
+        var route = Router.getRouteByName(routeName);
+        if(route !== null)
+        {
+          console.log("setting roue")
+          if(hash !== null && hash.length > 0)
+          {
+            Router.setRoute(route, hash);
+          }
+          else
+          {
+            Router.setRoute(route);
+          }
+        }
+        e.stopPropagation();
+        e.nativeEvent.stopImmediatePropagation();
+        return false;
+      }
+      else
+      {
+        console.log("route.NOTfound", routeName);
       }
     }
   }

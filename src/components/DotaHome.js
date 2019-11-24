@@ -4,6 +4,7 @@ import { Icon } from 'react-icons-kit'
 import {code} from 'react-icons-kit/fa/code'
 import {book} from 'react-icons-kit/icomoon/book'
 import {wrench} from 'react-icons-kit/icomoon/wrench'
+import Router from "./../Router"
 
 class DotaHome extends Component
 {
@@ -11,57 +12,146 @@ class DotaHome extends Component
   {
     super(props);
     this.markdown = "";
+    this.data = [
+      {
+        section : "Libraries",
+        icon : "code",
+        items : [
+          {
+            title : "Query",
+            route : "dota-libs",
+            hash : "query",
+            desc : "Functions to simplify searching"
+          },
+          {
+            title : "Game Setup",
+            route : "dota-libs",
+            hash : "game-setup",
+            desc : "Quick loading into custom games"
+          },
+          {
+            title : "Task",
+            route : "dota-libs",
+            hash : "task",
+            desc : "Delay a function call or execute a function repeatitivly with a delay"
+          },
+          {
+            title : "VMath",
+            route : "dota-libs",
+            hash : "vmath",
+            desc : "Vector math functions"
+          },
+          {
+            title : "Camera",
+            route : "dota-libs",
+            hash : "camera",
+            desc : "Controlling the focus of the camera"
+          }
+        ]
+      },
+      {
+        section : "Guides",
+        icon : "book",
+        items : [
+          {
+            title : "Simple Lua Ability",
+            route : "dota-libs",
+            hash : "simple-lua-ability",
+          },
+          {
+            title : "Ultimate Hotkey Fix",
+            route : "dota-libs",
+            hash : "ultimate-hotkey",
+          },
+        ]
+      },
+      {
+        section : "Tools",
+        icon : "wrench",
+        items : [
+          {
+            title : "API",
+            route : "dota-api"
+          },
+          {
+            title : "KV Checker",
+            route : "dota-kv-checker"
+          }
+        ]
+      }
+    ]
+  }
+
+  getItem(item, icon)
+  {
+    var route = Router.getRouteByName(item.route);
+    if(route != null)
+    {
+      var path = route.path;
+      var iconDOM = null;
+      var iconContainerClassName = "dota-home-item-icon-small";
+      if(icon === "code")
+      {
+        iconDOM = (<Icon size={28} icon={code} />);
+        iconContainerClassName = "dota-home-item-icon";
+      }
+      else if(icon === "book")
+      {
+        iconDOM = (<Icon size={18} icon={book} />);
+      }
+      else if(icon === "wrench")
+      {
+        iconDOM = (<Icon size={18} icon={wrench} />);
+      }
+
+      if(item.hash !== undefined)
+      {
+        path += "#" + item.hash;
+      }
+      else
+      {
+        item.hash = "";
+      }
+
+      var descDOM = "";
+      if(item.desc !== undefined)
+      {
+        descDOM = (<div className="dota-home-item-desc">{item.desc}</div>);
+      }
+
+      return(
+        <a href={path} route={item.route} hash={item.hash} onClick={Router.handleClick}>
+          <div className={iconContainerClassName}>
+            {iconDOM}
+          </div>
+          <div className="dota-home-item-title">{item.title}</div>
+          {descDOM}
+        </a>
+      );
+    }
+  }
+
+  getSections()
+  {
+    var content = [];
+    for(var i=0; i<this.data.length; i++)
+    {
+      var section = this.data[i];
+      content.push(<h2>{section.section}</h2>);
+      for(var b=0; b<section.items.length; b++)
+      {
+        var item = this.getItem(section.items[b], section.icon);
+        content.push(item);
+      }
+    }
+    return content;
   }
 
   render()
   {
     return(
       <div className="dota-home-con">
-        <h2>Libraries</h2>
-        <a href="/dota/libs#query">
-          <div className="dota-home-item-icon"><Icon size={28} icon={code} /></div>
-          <div className="dota-home-item-title">Query</div>
-          <div className="dota-home-item-desc">Functions to simplify searching</div>
-        </a>
-        <a href="/dota/libs#game-setup">
-          <div className="dota-home-item-icon"><Icon size={28} icon={code} /></div>
-          <div className="dota-home-item-title">GameSetup</div>
-          <div className="dota-home-item-desc">Quick loading into custom games</div>
-        </a>
-        <a href="/dota/libs#task">
-          <div className="dota-home-item-icon"><Icon size={28} icon={code} /></div>
-          <div className="dota-home-item-title">Task</div>
-          <div className="dota-home-item-desc">Delay a function call or execute a function repeatitivly with a delay</div>
-        </a>
-        <a href="/dota/libs#vmath">
-          <div className="dota-home-item-icon"><Icon size={28} icon={code} /></div>
-          <div className="dota-home-item-title">VMath</div>
-          <div className="dota-home-item-desc">Vector math functions</div>
-        </a>
-        <a href="/dota/libs#camera">
-          <div className="dota-home-item-icon"><Icon size={28} icon={code} /></div>
-          <div className="dota-home-item-title">Camera</div>
-          <div className="dota-home-item-desc">Controlling the focus of the camera</div>
-        </a>
-        <h2>Guides</h2>
-        <a href="/dota/libs#simple-lua-ability">
-          <div className="dota-home-item-icon-small"><Icon size={18} icon={book} /></div>
-          <div className="dota-home-item-title">Simple Lua Ability</div>
-        </a>
-        <a href="/dota/libs#ultimate-hotkey">
-          <div className="dota-home-item-icon-small"><Icon size={18} icon={book} /></div>
-          <div className="dota-home-item-title">Ultimate Hotkey Fix</div>
-        </a>
-
-        <h2>Tools</h2>
-        <a href="/dota/api">
-          <div className="dota-home-item-icon-small"><Icon size={18} icon={wrench} /></div>
-          <div className="dota-home-item-title">API</div>
-        </a>
-        <a href="/dota/kv-checker">
-        <div className="dota-home-item-icon-small"><Icon size={18} icon={wrench} /></div>
-        <div className="dota-home-item-title">KV Checker</div>
-        </a>
+        {this.getSections()}
       </div>
     );
   }

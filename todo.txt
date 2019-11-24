@@ -1,3 +1,2 @@
--footer for home page
 -markdown lists
--add routing for some links
+-favicon

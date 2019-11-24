@@ -118,7 +118,7 @@ function addRoutes()
       );
     },
     meta : {
-      title : "Home - DCG Tools"
+      title : "Home"
     }
   });
 }
