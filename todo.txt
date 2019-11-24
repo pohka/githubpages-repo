@@ -1,4 +1,3 @@
 -footer for home page
--youtube video series page
 -meta tags
--fix navigaction bug with hashes
+-markdown lists

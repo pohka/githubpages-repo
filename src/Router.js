@@ -9,7 +9,7 @@ class Router extends Component
   {
     window.addEventListener("popstate", function(e) {
       let route = Router.findRouteMatch(e.target.location.pathname);
-      Router.setRoute(route);
+      Router.setRoute(route, window.location.pathname);
     });
   }
   
@@ -56,9 +56,14 @@ class Router extends Component
     return route.dom();
   }
 
-  static setRoute(route)
+  static setRoute(route, hash)
   {
-    window.history.pushState({}, route.meta.title, route.path + window.location.hash);
+    var path = route.path;
+    if(hash !== undefined)
+    {
+      path += hash;
+    }
+    window.history.pushState({}, route.meta.title, path);
     ReactDOM.render(route.dom(), document.getElementById("root"))
     document.body.scrollTop = document.documentElement.scrollTop = 0;
   }
