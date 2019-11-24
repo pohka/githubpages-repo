@@ -16,12 +16,14 @@
 .code-block
 {
   overflow-x: auto;
-  color: rgb(245, 245, 245);
+  color: var(--color_text);
   font-size: 12px;
   padding: 20px 20px;
   display: block;
   white-space: pre-wrap;
   margin: 10px 0px;
+  line-height: 16px;
+  overflow-x: auto;
 }
 
 hr

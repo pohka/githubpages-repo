@@ -136,3 +136,17 @@ table a:hover
   margin-bottom: -8px;
   text-align: left;
 }
+
+@media only screen and (max-width: 1050px) {
+  .tables
+  {
+    margin-left: 160px;
+  }
+
+  .col-function
+  {
+    padding: 2px 4px;
+    padding-left: 20px;
+    width: 280px;
+  }
+}

@@ -116,3 +116,29 @@
   text-align: center;
   font-weight: bold;
 }
+
+@media only screen and (max-width: 1050px) {
+  .navbar
+  {
+    width: 160px;
+  }
+
+  .sidenav-search input
+  {
+    width: 140px;
+    margin-left: 0px;
+    padding: 0px 10px;
+  }
+
+  .search-icon
+  {
+    display:none;
+  }
+
+  .api-nav-item
+  {
+    font-size: 12px;
+    padding: 10px 4px;
+    border-bottom: 2px solid var(--color_table_border);
+  }
+}

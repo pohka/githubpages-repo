@@ -20,6 +20,7 @@ body
   background: var(--color_background);
   color: var(--color_text);
   overflow-y: scroll;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 h1
@@ -28,12 +29,16 @@ h1
   padding-top: 18px;
 }
 
+
+
 .App {
   text-align: center;
   font-family: 'Noto Sans', sans-serif;
   letter-spacing: 0.7px;
   font-size: 14px;
   margin-top: 42px;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .App-logo {

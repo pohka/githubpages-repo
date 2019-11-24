@@ -1,2 +1,2 @@
 -markdown lists
--favicon
+-update readme
